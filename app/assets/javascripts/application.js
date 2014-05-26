@@ -23,4 +23,5 @@
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
 
-//= require_tree .
+//= require_tree ./app
+

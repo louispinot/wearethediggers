@@ -23,7 +23,7 @@
 # end
 
 
-json = ActiveSupport::JSON.decode(File.read("./soldiers.json"))
+json = ActiveSupport::JSON.decode(File.read("db/soldiers.json"))
   json['collection1'].each do |s|
     first_name = s['scrap_name'][17..-1].split[-1]
     last_name = s['scrap_name'][17..-1].split[0..-2].join(" ")
