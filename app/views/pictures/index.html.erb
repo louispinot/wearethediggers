@@ -1,2 +1,9 @@
-<h1>Pictures#index</h1>
-<p>Find me in app/views/pictures/index.html.erb</p>
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+  <% @pictures.each do |pic| %>
+
+    <div>
+      <%= image_tag pic.picture_url %>
+    </div>
+
+  <% end %>
+</div>

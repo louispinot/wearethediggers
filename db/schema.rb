@@ -11,10 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140526130831) do
+=======
 ActiveRecord::Schema.define(version: 20140526124848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+>>>>>>> master
 
   create_table "identifications", force: true do |t|
     t.integer  "soldier_id"
@@ -31,7 +35,10 @@ ActiveRecord::Schema.define(version: 20140526124848) do
   create_table "pictures", force: true do |t|
     t.string   "picture_url"
     t.string   "ref"
+<<<<<<< HEAD
+=======
     t.string   "type"
+>>>>>>> master
     t.string   "author"
     t.string   "place"
     t.string   "copyrights_owner"
@@ -56,6 +63,8 @@ ActiveRecord::Schema.define(version: 20140526124848) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+=======
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -78,4 +87,5 @@ ActiveRecord::Schema.define(version: 20140526124848) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+>>>>>>> master
 end

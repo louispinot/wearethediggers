@@ -45,3 +45,4 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'masonry-rails'
