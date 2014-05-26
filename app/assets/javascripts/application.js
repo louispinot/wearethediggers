@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 
+
 //= require masonry/jquery.masonry
 
 //= require masonry/jquery.event-drag
@@ -22,6 +23,8 @@
 
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
+
+//= require bootstrap.min
 
 //= require_tree ./app
 

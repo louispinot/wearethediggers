@@ -18,9 +18,46 @@
  *= require 'masonry/infinitescroll'
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
- *
+ *= require 'bootstrap.min'
+ *= require 'flat-ui'
+
 
  *= require_tree ./app
 
  *= require_self
  */
+
+
+
+body{
+  margin: 0;
+}
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#test{
+  position: absolute;
+  top: 300px;
+  right: 200px;
+}
+
+h1, h2{
+  color: #EEE;
+}

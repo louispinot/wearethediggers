@@ -46,3 +46,7 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 # gem 'debugger', group: [:development, :test]
 
 gem 'masonry-rails'
+gem 'better_errors'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
