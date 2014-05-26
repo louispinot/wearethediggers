@@ -23,10 +23,10 @@
 # end
 
 
-json = ActiveSupport::JSON.decode(File.read("db/soldiers.json"))
-  json[collection1].each do |s|
-    first_name = s['first_name']
-    last_name = s['last_name']
+json = ActiveSupport::JSON.decode(File.read("./soldiers.json"))
+  json['collection1'].each do |s|
+    first_name = s['scrap_name'][17..-1].split[-1]
+    last_name = s['scrap_name'][17..-1].split[0..-2].join(" ")
     rank = s['rank']
     unit = s['unit']
     date_of_death = s['date_of_death']
@@ -39,4 +39,6 @@ json = ActiveSupport::JSON.decode(File.read("db/soldiers.json"))
 
 
 
-user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true)
+
+
+#user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true)
