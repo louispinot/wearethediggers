@@ -35,5 +35,6 @@ class SoldiersController < ApplicationController
 
   def attributes
     attributes = params.require(:soldier).permit(:first_name, :last_name, :service_number, :rank, :unit, :date_of_death, :place_of_death, :cemetery, :source, :bio)
+  end
 end
 
