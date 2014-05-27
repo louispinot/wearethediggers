@@ -13,7 +13,7 @@ class SoldiersController < ApplicationController
   end
 
   def update
-    @soldier(attributes)
+    @soldier.update!(attributes)
   end
 
   def new
