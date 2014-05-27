@@ -27,4 +27,5 @@
 //= require bootstrap.min
 
 //= require_tree ./app
+//= require_self
 

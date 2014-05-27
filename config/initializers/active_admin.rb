@@ -95,7 +95,7 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  config.logout_link_path = :destroy_admin_user_session_path
+  config.logout_link_path = '/'
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
@@ -162,13 +162,16 @@ ActiveAdmin.setup do |config|
   # and feel.
   #
   # To load a stylesheet:
-    config.register_stylesheet 'admin/active_admin.css.scss'
+    config.clear_stylesheets!
+    config.register_stylesheet 'admin'
+
   #
   # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
   #   config.register_stylesheet 'my_print_stylesheet.css', :media => :print
   #
   # To load a javascript file:
-    config.register_javascript 'admin/active_admin.js.coffee'
+  config.clear_javascripts!
+  config.register_javascript 'admin'
 
 
   # == CSV options
