@@ -1,8 +1,10 @@
-<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
-  <div class="col4">
-    <% @pictures.each do |pic| %>
-    <%= image_tag pic.picture_url %>
-    <% end %>
-  </div>
+<div class="transitions-enabled infinite-scroll clearfix">
+
+  <% @pictures.each do |pic| %>
+    <div>
+      <%= image_tag pic.picture_url %>
+    </div>
+  <% end %>
+
 </div>
 
