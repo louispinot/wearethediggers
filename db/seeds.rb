@@ -23,22 +23,22 @@
 # end
 
 
-json = ActiveSupport::JSON.decode(File.read("db/soldiers.json"))
-  json['collection1'].each do |s|
-    first_name = s['scrap_name'][17..-1].split[-1]
-    last_name = s['scrap_name'][17..-1].split[0..-2].join(" ")
-    rank = s['rank']
-    unit = s['unit']
-    date_of_death = s['date_of_death']
-    place_of_death = s['place_of_death']
-    cemetery = s['cemetery']
-    source = s['source']
-    service_number = s['service_number']
-    Soldier.create!(first_name: first_name, last_name: last_name, service_number: service_number, rank: rank, unit: unit, date_of_death: date_of_death, place_of_death: place_of_death, cemetery: cemetery, source: source)
-  end
+# # json = ActiveSupport::JSON.decode(File.read("db/soldiers.json"))
+# #   json['collection1'].each do |s|
+# #     first_name = s['scrap_name'][17..-1].split[-1]
+# #     last_name = s['scrap_name'][17..-1].split[0..-2].join(" ")
+# #     rank = s['rank']
+# #     unit = s['unit']
+# #     date_of_death = s['date_of_death']
+# #     place_of_death = s['place_of_death']
+# #     cemetery = s['cemetery']
+# #     source = s['source']
+# #     service_number = s['service_number']
+# #     Soldier.create!(first_name: first_name, last_name: last_name, service_number: service_number, rank: rank, unit: unit, date_of_death: date_of_death, place_of_death: place_of_death, cemetery: cemetery, source: source)
+# #   end
 
 
 
 
 
-#user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true)
+# user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true)

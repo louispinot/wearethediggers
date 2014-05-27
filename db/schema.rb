@@ -11,14 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140526130831) do
-=======
-ActiveRecord::Schema.define(version: 20140526124848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
->>>>>>> master
+
+  create_table "active_admin_comments", force: true do |t|
+    t.string   "namespace"
+    t.text     "body"
+    t.string   "resource_id",   null: false
+    t.string   "resource_type", null: false
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "identifications", force: true do |t|
     t.integer  "soldier_id"
@@ -35,10 +46,6 @@ ActiveRecord::Schema.define(version: 20140526124848) do
   create_table "pictures", force: true do |t|
     t.string   "picture_url"
     t.string   "ref"
-<<<<<<< HEAD
-=======
-    t.string   "type"
->>>>>>> master
     t.string   "author"
     t.string   "place"
     t.string   "copyrights_owner"
@@ -63,8 +70,6 @@ ActiveRecord::Schema.define(version: 20140526124848) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -87,5 +92,4 @@ ActiveRecord::Schema.define(version: 20140526124848) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
->>>>>>> master
 end

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+ruby '2.1.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
@@ -33,6 +35,9 @@ gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'formtastic', github: 'justinfrench/formtastic'
 
+gem 'better_errors'
+gem 'binding_of_caller'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -49,10 +54,7 @@ gem 'better_errors'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
-
-ruby '2.1.1'
 gem 'thin'
 gem 'rails_12factor', group: :production
 
 gem 'figaro', '1.0.0.rc1'
-
