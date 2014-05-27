@@ -11,15 +11,11 @@
  * file per style scope.
  *
 
- *= require 'masonry/basic'
- *= require 'masonry/centered'
- *= require 'masonry/fluid'
- *= require 'masonry/gutters'
- *= require 'masonry/infinitescroll'
- *= require 'masonry/right-to-left'
- *= require 'masonry/transitions'
  *= require 'bootstrap.min'
  *= require 'flat-ui'
+ *= require 'default'
+ *= require 'component'
+
 
 
  *= require_tree ./app
@@ -29,7 +25,7 @@
 
 
 body{
-  margin: 0;
+  margin-top: 80px;
 }
 
 #bg {
@@ -49,14 +45,4 @@ body{
   margin: auto;
   min-width: 50%;
   min-height: 50%;
-}
-
-#test{
-  position: absolute;
-  top: 300px;
-  right: 200px;
-}
-
-h1, h2{
-  color: #EEE;
 }

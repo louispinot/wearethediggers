@@ -13,18 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 
-
-//= require masonry/jquery.masonry
-
-//= require masonry/jquery.event-drag
-//= require masonry/jquery.imagesloaded.min
-//= require masonry/jquery.infinitescroll.min
-//= require masonry/modernizr-transitions
-
-//= require masonry/box-maker
-//= require masonry/jquery.loremimages.min
-
 //= require bootstrap.min
+
+//= require modernizr.custom
+//= require masonry.pkgd.min
+//= require imagesloaded
+//= require classie
+//= require AnimOnScroll
 
 //= require_tree ./app
 //= require_self
