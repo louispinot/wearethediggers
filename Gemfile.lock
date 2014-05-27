@@ -91,11 +91,8 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     commonjs (0.2.7)
-<<<<<<< HEAD
     daemons (1.1.9)
-=======
     debug_inspector (0.0.2)
->>>>>>> master
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -206,7 +203,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (1.1.0)
+    tzinfo (1.2.0)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
