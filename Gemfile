@@ -38,8 +38,6 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'better_errors'
 gem 'binding_of_caller'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
