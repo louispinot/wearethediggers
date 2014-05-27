@@ -4,11 +4,9 @@
 <div class="container">
   <div class="row">
     <div id="test" class="col-md-4">
-      <h1>We are the diggers</h1>
-      <h2>keep history alive... together !</h2>
-      <button type="button" class="btn btn-default">Sign in</button>
-      <button type="button" class="btn btn-primary">Log in</button>
-      <p><span class="label label-danger">Label</span></p>
+      <h4>keep history alive... together !</h4>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-default" %>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
     </div>
 
     </div>

@@ -15,5 +15,11 @@
 
 //= require bootstrap.min
 
+//= require modernizr.custom
+//= require masonry.pkgd.min
+//= require imagesloaded
+//= require classie
+//= require AnimOnScroll
+
 //= require_tree ./app
 
