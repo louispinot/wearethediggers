@@ -48,3 +48,10 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'better_errors'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
+
+ruby '2.1.1'
+gem 'thin'
+gem 'rails_12factor', group: :production
+
+gem 'figaro', '1.0.0.rc1'
