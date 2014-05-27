@@ -50,7 +50,6 @@ gem 'binding_of_caller'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'better_errors'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
