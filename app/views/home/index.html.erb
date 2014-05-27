@@ -2,18 +2,25 @@
   <img src="/assets/home_full.jpg" alt="">
 </div>
 <div class="container">
+
+
+
   <div class="row">
-    <div id="test" class="col-md-4">
+    <div class="col-md-6 call-to-action">
       <h1>We are the diggers</h1>
-      <h2>keep history alive... together !</h2>
+      <h3>keep history alive... together !</h3>
+      <br><br>
+
       <% if user_signed_in? %>
-      <p>hello <%= current_user.email %></p>
+      <%= link_to "Browse Picture Collection", pictures_path, class: "btn btn-lg btn-primary" %>
       <% else %>
-      <%= link_to "Sign in", new_user_session_path, class: "btn btn-default" %>
-      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-primary" %>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-danger" %>
+
       <% end %>
     </div>
 
-    </div>
+
+
   </div>
 </div>
