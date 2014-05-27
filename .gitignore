@@ -17,3 +17,6 @@
 
 #ignore database.yml
 /config/databse.yml
+
+# Ignore application configuration
+/config/application.yml
