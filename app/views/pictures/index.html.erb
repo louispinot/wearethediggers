@@ -1,10 +1,17 @@
-<div class="transitions-enabled infinite-scroll clearfix">
+<!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
 
-  <% @pictures.each do |pic| %>
-    <div>
+  <!-- <% @pictures.each do |pic| %> -->
+ <!--    <div>
       <%= image_tag pic.picture_url %>
     </div>
   <% end %>
+ -->
 
-</div>
+  <ul class="grid effect-4" id="grid">
+    <% @pictures.each do |pic| %>
+      <li><%= image_tag pic.picture_url %></li>
+    <% end %>
+  </ul>
+
+<!-- </div> -->
 
