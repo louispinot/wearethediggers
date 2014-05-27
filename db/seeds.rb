@@ -41,4 +41,4 @@
 
 
 
-# user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true)
+# user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true, first_name: 'The', last_name: 'Admin')
