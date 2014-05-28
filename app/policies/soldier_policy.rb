@@ -6,11 +6,11 @@ class SoldierPolicy < ApplicationPolicy
   end
 
   def index?
-    true
+    user
   end
 
   def show?
-    true
+    user
   end
 
   def new?
@@ -33,7 +33,7 @@ class SoldierPolicy < ApplicationPolicy
 
   private
 
-  def admin_right??
+  def admin_right?
     if user.admin?
       true
     else
