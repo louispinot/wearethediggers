@@ -10,5 +10,10 @@
  <%= link_to "Back", soldiers_path, class: "btn btn-lg btn-primary" %>
 
  <% if current_user.superuser? %>
-  <%= link_to "Edit", soldiers_path, class: "btn btn-lg btn-danger" %>
+  <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-lg btn-danger" %>
 <%end%>
+
+
+<%= content_tag('div', class: "bio-in-html") do  -%>
+  <%= @soldier.bio.html_safe if @soldier.bio %>
+<% end %>

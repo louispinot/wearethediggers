@@ -24,3 +24,4 @@
 //= require_tree ./app
 //= require_self
 
+//= require medium-editor
