@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   end
 
   def superuser?
-    self.superuser
+    self.superuser || self.admin
   end
 
 
