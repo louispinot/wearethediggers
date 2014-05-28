@@ -5,11 +5,11 @@ class PicturePolicy < ApplicationPolicy
     end
   end
   def index?
-    true
+    user
   end
 
   def show?
-    true
+    user
   end
 
   def new?
@@ -33,7 +33,7 @@ class PicturePolicy < ApplicationPolicy
 
   private
 
-  def admin_right??
+  def admin_right?
     if user.admin?
       true
     else

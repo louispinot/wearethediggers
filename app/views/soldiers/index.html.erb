@@ -1,2 +1,9 @@
 <h1>Soldiers#index</h1>
 <p>Find me in app/views/soldiers/index.html.erb</p>
+
+<%= @soldiers.each do |soldier| %>
+ <p><%= soldier.rank%> <%= soldier.first_name%> <%= soldier.last_name%></p>
+ <p><%= soldier.unit %>; Service number: <%= soldier.service_number %></p>
+ <p>Date and place of death: <%= soldier.date_of_death %>, <%= soldier.place_of_death %></p>
+ <p>Place of burial : <%= (soldier.cemetery == "")? "Unknown" : soldier.cemetery %></p>
+<%end%>

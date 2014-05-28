@@ -6,11 +6,11 @@ class SoldierPolicy < ApplicationPolicy
   end
 
   def index?
-    true
+    user
   end
 
   def show?
-    true
+    user
   end
 
   def new?
