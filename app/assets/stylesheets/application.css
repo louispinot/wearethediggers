@@ -20,4 +20,8 @@
 
  *= require_tree ./app
  *= require_self
+
+
+ *= require medium-editor/medium-editor
+ *= require medium-editor/themes/flat
  */

@@ -18,6 +18,7 @@ class SoldiersController < ApplicationController
   def update
     authorize @soldier
     @soldier.update!(attributes)
+    redirect_to soldier_path(@soldier)
   end
 
   def new
