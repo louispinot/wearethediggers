@@ -2,8 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#picture-show{
-  width: 70%;
-  /*max-height: 100%;*/
+#picture-wraper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 20%;
+  min-height: 20%;
+}
 
+
+#desc-box{
+  width: 70%;
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#picture-box{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
 }
