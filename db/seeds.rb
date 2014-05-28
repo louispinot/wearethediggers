@@ -10,6 +10,7 @@
 
 #seed pictures.json into db
 
+
 json = ActiveSupport::JSON.decode(File.read("db/pictures.json"))
 json['collection1'].each do |p|
   ref = p['name']
@@ -37,8 +38,4 @@ json = ActiveSupport::JSON.decode(File.read("db/soldiers.json"))
     Soldier.create!(first_name: first_name, last_name: last_name, service_number: service_number, rank: rank, unit: unit, date_of_death: date_of_death, place_of_death: place_of_death, cemetery: cemetery, source: source)
   end
 
-
-
-
-
-user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true)
+# user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true, first_name: 'The', last_name: 'Admin')
