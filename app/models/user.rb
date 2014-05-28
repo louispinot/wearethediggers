@@ -8,5 +8,9 @@ class User < ActiveRecord::Base
     self.admin
   end
 
+  def superuser?
+    self.superuser
+  end
+
 
 end

@@ -55,3 +55,5 @@ gem 'thin'
 gem 'rails_12factor', group: :production
 
 gem 'figaro', '1.0.0.rc1'
+
+gem "pundit"

@@ -4,26 +4,34 @@ class SoldiersController < ApplicationController
 
   def index
     @soldiers = Soldier.all
+    authorize @soldiers
   end
 
   def show
+    authorize @soldier
   end
 
   def edit
+    authorize @soldier
   end
 
   def update
+    authorize @soldier
     @soldier.update!(attributes)
   end
 
   def new
+    authorize @soldier
   end
 
   def create
+    authorize @soldier
     Soldier.create(attributes)
+
   end
 
   def destroy
+    authorize @soldier
     @soldier.destroy
   end
 
