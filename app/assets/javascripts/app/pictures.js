@@ -2,4 +2,8 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
+//= require modernizr.custom
+//= require masonry.pkgd.min
+//= require imagesloaded
+//= require classie
+//= require AnimOnScroll
