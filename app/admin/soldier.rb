@@ -14,10 +14,21 @@ ActiveAdmin.register Soldier do
 
   end
 
+  # permit_params do
+  #     params = [:bio]
+  #     if current_user.admin?
+  #       params.push(:first_name, :last_name, :service_number, :rank, :unit, :date_of_death, :place_of_death, :cemetery, :source)
+  #     end
+  #     params
+  #   end
+  permit_params :first_name, :last_name, :service_number, :rank, :unit, :date_of_death, :place_of_death, :cemetery, :source, :bio
+
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  # permit_params :list, :of, :attributes, :on, :model
+
+
+
   #
   # or
   #
