@@ -13,15 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require bootstrap.min
-
 //= require modernizr.custom
 //= require masonry.pkgd.min
 //= require imagesloaded
 //= require classie
 //= require AnimOnScroll
 
-//= require_tree ./app
-//= require_self
+//= require bootstrap.min
 
 //= require medium-editor
+//= require_self
+

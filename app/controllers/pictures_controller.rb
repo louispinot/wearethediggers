@@ -4,8 +4,7 @@ class PicturesController < ApplicationController
 
 
   def index
-    @pictures = Picture.all
-    authorize @pictures
+    @pictures = Picture.all.shuffle
   end
 
   def show

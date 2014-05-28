@@ -1,7 +1,6 @@
-<h1>Soldiers#show</h1>
+<h1><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h1>
 
  <div class="soldier">
-    <p><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></p>
     <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
     <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
     <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
