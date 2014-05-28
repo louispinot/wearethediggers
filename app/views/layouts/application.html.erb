@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">WE ARE THE DIGGERS</a>
+      <%= link_to "WE ARE THE DIGGERS", root_path, class:"navbar-brand"  %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,6 +27,14 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Browse Pictures", pictures_path %></li>
         <li><%= link_to "Browse Soldiers", soldiers_path %></li>
+        <li>
+          <form role="search" class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" placeholder="Search" class="form-control">
+             </div>
+            <button class="btn btn-default" type="submit">Submit</button>
+          </form>
+      </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -46,8 +54,6 @@
           <li><%= link_to "Sign in", new_user_session_path %></li>
           <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% end %>
-
-
 
         <li><a href="" id="blank-space"> </a></li>
       </ul>
