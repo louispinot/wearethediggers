@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  margin-top: 80px;
-}
-
 #bg {
   position: fixed;
   top: -50%;
@@ -21,18 +17,15 @@ body{
   right: 0;
   bottom: 0;
   margin: auto;
-  min-width: 50%;
-  min-height: 50%;
+  min-width: 20%;
+  min-height: 20%;
 }
 
 .call-to-action {
   margin-top: 15%;
   padding: 1em;
   background-color: rgba(52, 73, 94, 0.7);
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  color:#D9D4D0;
+  color:#FFF;
 }
 
 .call-to-action a {
