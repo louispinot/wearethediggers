@@ -33,7 +33,7 @@ class SoldierPolicy < ApplicationPolicy
 
   private
 
-  def admin_right??
+  def admin_right?
     if user.admin?
       true
     else
