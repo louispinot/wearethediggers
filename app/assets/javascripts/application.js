@@ -21,6 +21,5 @@
 
 //= require bootstrap.min
 
-//= require medium-editor
 //= require_self
 

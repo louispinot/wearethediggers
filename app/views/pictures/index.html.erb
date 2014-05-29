@@ -1,9 +1,7 @@
 <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
   <ul class="grid effect-4" id="grid">
     <% @pictures.each do |pic| %>
-      <!-- <li><%= image_tag pic.picture_url %></li> -->
       <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
-
     <% end %>
   </ul>
 

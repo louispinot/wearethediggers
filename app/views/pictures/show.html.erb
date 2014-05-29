@@ -1,15 +1,17 @@
-<div class"container-fluid">
+
   <div class="row">
     <div id="picture-wraper">
-      <div id="desc-box" class="col-md-4">
-        <h6><%= @picture.ref %></h6>
-        <p>
-          <%= @picture.description %>
-        </p>
-      </div>
-      <div id="">
+      <div class="text-center">
         <%= image_tag @picture.picture_url, id:"picture-box" %>
+        <div id="desc-box" >
+          <h6><%= @picture.ref %></h6>
+          <p>
+            <%= @picture.description %>
+          </p>
+        </div>
+        <%= link_to " < Back to pictures", pictures_path, class: "btn btn-sm btn-primary back-btn" %></div>
       </div>
     </div>
   </div>
-</div>
+
+<div>

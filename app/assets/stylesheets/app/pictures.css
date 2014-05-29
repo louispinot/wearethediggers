@@ -16,13 +16,20 @@
 
 #desc-box{
   width: 70%;
-  position: absolute;
+  position: relative;
+  padding: 10px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#picture-box{
-  z-index: -1;
-  position: absolute;
-  width: 100%;
+
+#picture-box {
+height: 100%;
+}
+
+.back-btn {
+position: absolute;
+z-index: 10;
+right: 35px;
+top: 70px;
 }

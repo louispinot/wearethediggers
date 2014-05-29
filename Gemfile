@@ -48,4 +48,4 @@ gem 'figaro', '1.0.0.rc1'
 
 gem "pundit"
 
-gem 'medium-editor-rails'
+gem 'medium-editor-rails', '0.9.3'
