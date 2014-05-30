@@ -8,6 +8,7 @@ class SoldierPolicy < ApplicationPolicy
   def index?
     user
   end
+
   def search?
     user
   end

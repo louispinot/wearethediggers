@@ -8,7 +8,7 @@ class SoldiersController < ApplicationController
   end
 
   def search
-    authorize @soldiers
+
     @soldiers = Soldier.search_by_name_with_rank(params[:query])
 
     respond_to do |format|
