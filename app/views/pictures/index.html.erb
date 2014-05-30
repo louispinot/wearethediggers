@@ -1,14 +1,54 @@
-<!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
-  <ul class="grid effect-4" id="grid">
-    <% @pictures.each do |pic| %>
-      <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
-    <% end %>
-  </ul>
+    <div id="st-container" class="st-container">
+      <!--
+        example menus
+        these menus will be on top of the push wrapper
+      -->
 
-  <script>
-    new AnimOnScroll( document.getElementById( 'grid' ), {
-      minDuration : 0.4,
-      maxDuration : 0.7,
-      viewportFactor : 0.2
-    } );
-  </script>
+      <nav class="st-menu st-effect-4" id="menu-4">
+        <h2 class="icon icon-lab">Sidebar</h2>
+        <ul>
+          <li><a class="icon icon-data" href="#">Data Management</a></li>
+          <li><a class="icon icon-location" href="#">Location</a></li>
+          <li><a class="icon icon-study" href="#">Study</a></li>
+          <li><a class="icon icon-photo" href="#">Collections</a></li>
+          <li><a class="icon icon-wallet" href="#">Credits</a></li>
+        </ul>
+      </nav>
+      <!-- content push wrapper -->
+      <div class="st-pusher">
+        <!--
+          example menus
+          these menus will be under the push wrapper
+        -->
+
+        <div class="st-content"><!-- this is the wrapper for the content -->
+          <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+            <div class="main clearfix">
+              <div id="st-trigger-effects" class="column">
+
+                <button class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
+
+              </div>
+
+              <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
+              <ul class="grid effect-4" id="grid">
+                <% @pictures.each do |pic| %>
+                <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
+                <% end %>
+              </ul>
+
+              <script>
+              new AnimOnScroll( document.getElementById( 'grid' ), {
+                minDuration : 0.4,
+                maxDuration : 0.7,
+                viewportFactor : 0.2
+              } );
+              </script>
+
+            </div><!-- /main -->
+          </div><!-- /st-content-inner -->
+        </div><!-- /st-content -->
+      </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
+    <script src="assets/classie.js"></script>
+    <script src="assets/sidebarEffects.js"></script>

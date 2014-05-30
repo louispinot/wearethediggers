@@ -19,6 +19,8 @@
 //= require classie
 //= require AnimOnScroll
 
+//= require sidebarEffects
+
 //= require bootstrap.min
 
 //= require_self

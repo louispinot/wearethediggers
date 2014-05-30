@@ -13,15 +13,13 @@
   min-height: 50%;
 }
 
+#desc-box {
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 10px;
+float: none;
 
-#desc-box{
-  width: 70%;
-  position: relative;
-  padding: 10px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 #picture-box {
 height: 100%;
@@ -31,5 +29,13 @@ height: 100%;
 position: absolute;
 z-index: 10;
 right: 35px;
-top: 70px;
+top: 120px;
+}
+
+
+.favorites-btn {
+position: absolute;
+z-index: 10;
+right: 35px;
+top: 170px;
 }
