@@ -39,3 +39,8 @@ z-index: 10;
 right: 35px;
 top: 170px;
 }
+
+.sidebar-tag-filter{
+  color: #fff;
+  margin-left: 15px;
+}
