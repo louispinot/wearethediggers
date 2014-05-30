@@ -14,4 +14,10 @@ class Soldier < ActiveRecord::Base
                                   any_word: true
                                   }
                               }
+    pg_search_scope :search_by_service_number,
+                    :against => :service_number,
+                    :using => {tsearch: {
+                                  prefix: true
+                                  }
+                              }
 end

@@ -8,8 +8,13 @@ class SoldiersController < ApplicationController
   end
 
   def search
-
-    @soldiers = Soldier.search_by_name_with_rank(params[:query])
+    # if params[:query] == "" && params[:service_number] == ""
+    #   @soldiers = Soldier.all
+    if params[:query]
+      @soldiers = Soldier.search_by_name_with_rank(params[:query])
+   elsif params[:service_number]
+      @soldiers = Soldier.search_by_service_number(params[:service_number])
+   end
 
     respond_to do |format|
       format.html { render :index }

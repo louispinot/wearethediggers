@@ -2,7 +2,13 @@
 
 <%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
   <%= label_tag :query, "Search by name and rank: " %>
-  <%= text_field_tag :query, params[:query], class: 'search-box' %>
+  <%= text_field_tag :query, (params[:query] ? params[:query] : ""), class: 'search-box' %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+  <%= label_tag :service_number, "Search by service number: " %>
+  <%= text_field_tag :service_number, (params[:service_number] ? params[:service_number] : ""), class: 'search-box' %>
   <%= submit_tag "Search" %>
 <% end %>
 
