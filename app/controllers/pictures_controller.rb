@@ -4,7 +4,7 @@ class PicturesController < ApplicationController
 
 
   def index
-    @pictures = Picture.all.shuffle
+    @pictures = Picture.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show

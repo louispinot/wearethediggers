@@ -26,11 +26,17 @@
             </div>
 
         <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
+
+
             <ul class="grid effect-4" id="grid">
               <% @pictures.each do |pic| %>
               <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
               <% end %>
             </ul>
+
+            <%= will_paginate @posts %>
+
+
           </div><!-- /main -->
         </div><!-- /st-content-inner -->
       </div><!-- /st-content -->

@@ -49,3 +49,5 @@ gem 'figaro', '1.0.0.rc1'
 gem "pundit"
 
 gem 'medium-editor-rails', '0.9.3'
+gem 'will_paginate', '~> 3.0'
+
