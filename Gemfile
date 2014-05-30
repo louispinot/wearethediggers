@@ -49,3 +49,5 @@ gem 'figaro', '1.0.0.rc1'
 gem "pundit"
 
 gem 'medium-editor-rails'
+
+gem 'pg_search'
