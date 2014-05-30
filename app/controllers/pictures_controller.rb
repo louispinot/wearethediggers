@@ -1,10 +1,10 @@
 class PicturesController < ApplicationController
   before_action :find_picture, only: [:show, :edit, :update, :destroy]
   before_action :attributes, only: [:update, :create]
-
+  require 'will_paginate/array'
 
   def index
-    @pictures = Picture.all.shuffle
+    @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
