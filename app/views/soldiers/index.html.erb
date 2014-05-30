@@ -1,19 +1,15 @@
 <h1>Soldiers#index</h1>
 
 <%= form_tag search_soldiers_path, :method => :get, :remote => true do %>
-
   <%= label_tag :query, "Search terms" %>
   <%= text_field_tag :query, params[:query] %>
-
   <%= submit_tag "Search" %>
 <% end %>
 
 
 
 <div id="soldiers-search-results">
-  <% if @soldiers.any? %>
+
     <%= render @soldiers %>
-  <% else %>
-    <p>Sorry, there are no matching results.</p>
-  <% end %>
+
 </div>
