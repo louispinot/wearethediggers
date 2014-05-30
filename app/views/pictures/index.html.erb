@@ -1,16 +1,47 @@
-<!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
-  <ul class="grid effect-4" id="grid">
-    <% @pictures.each do |pic| %>
-      <!-- <li><%= image_tag pic.picture_url %></li> -->
-      <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
+<div id="st-container" class="st-container">
+  <!--
+    example menus
+    these menus will be on top of the push wrapper
+  -->
 
-    <% end %>
-  </ul>
+  <nav class="st-menu st-effect-4" id="menu-4">
+    <h2><i class="fa fa-tags"></i> Filter by tags</h2>
+    <ul>
+      <li class="sidebar-tag-filter"> <i class="fa fa-paw"></i> Pets</li>
+      <li class="sidebar-tag-filter"> <i class="fa fa-users"></i> Group</li>
+      <li class="sidebar-tag-filter"> <i class="fa fa-user"></i> Portrait</li>
+      <li class="sidebar-tag-filter"> <i class="fa fa-bomb"></i> Weapons</li>
+    </ul>
+    <button class="btn btn-warning">Filter</button>
+  </nav>
+  <!-- content push wrapper -->
+  <div class="st-pusher">
+      <div class="st-content"><!-- this is the wrapper for the content -->
+        <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+          <div class="main clearfix">
+            <div id="st-trigger-effects" class="column">
 
-  <script>
-    new AnimOnScroll( document.getElementById( 'grid' ), {
-      minDuration : 0.4,
-      maxDuration : 0.7,
-      viewportFactor : 0.2
-    } );
-  </script>
+              <button class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
+
+            </div>
+
+        <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
+            <ul class="grid effect-4" id="grid">
+              <% @pictures.each do |pic| %>
+              <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
+              <% end %>
+            </ul>
+          </div><!-- /main -->
+        </div><!-- /st-content-inner -->
+      </div><!-- /st-content -->
+  </div><!-- /st-pusher -->
+</div><!-- /st-container -->
+<script>
+  new AnimOnScroll( document.getElementById( 'grid' ), {
+    minDuration : 0.4,
+    maxDuration : 0.7,
+    viewportFactor : 0.2
+  } );
+</script>
+<script src="assets/classie.js"></script>
+<script src="assets/sidebarEffects.js"></script>
