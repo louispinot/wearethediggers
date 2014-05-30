@@ -3,8 +3,19 @@ class SoldiersController < ApplicationController
   before_action :attributes, only: [:update, :create]
 
   def index
-    @soldiers = Soldier.search_by_name_with_rank(params[:which])
+    @soldiers = Soldier.all
     authorize @soldiers
+  end
+
+  def search
+    authorize @soldiers
+    @soldiers = Soldier.search_by_name_with_rank(params[:query])
+
+    respond_to do |format|
+      format.html { render :index }
+      format.js { @articles }
+    end
+
   end
 
   def show

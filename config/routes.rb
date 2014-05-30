@@ -3,16 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root 'home#index'
-
-  get '/soldiers/index/:which', to: 'soldiers#index', as: 'soldiers'
-  post '/soldiers', to: 'soldiers#create'
-  get '/soldiers/new', to: 'soldiers#new', as: 'new_soldier'
-  get '/soldiers/:id/edit', to: 'soldiers#edit', as: 'edit_soldier'
-  get '/soldiers/:id', to: 'soldiers#show', as: 'soldier'
-  patch '/soldiers/:id', to: 'soldiers#update'
-  put '/soldiers/:id', to: 'soldiers#update'
-  delete '/soldiers/:id', to: 'soldiers#destroy'
-
+  resources :soldiers do
+    get 'search', on: :collection
+  end
   resources :pictures
 
   # The priority is based upon order of creation: first created -> highest priority.
