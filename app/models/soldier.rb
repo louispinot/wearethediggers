@@ -8,13 +8,10 @@ class Soldier < ActiveRecord::Base
     include PgSearch
     ## look at "Dynamic search scopes" to pass options in view like "search_by:"
     pg_search_scope :search_by_name_with_rank,
-                    :against => [:first_name, :last_name, :rank]
-
+                    :against => [:first_name, :last_name, :rank],
+                    :using => {tsearch: {
+                                  prefix: true,
+                                  any_word: true
+                                  }
+                              }
 end
-
-                        # :using => {:trigram,
-                              # :tsearch => {
-                              #     prefix: true,
-                              #     any_word: true
-                              #     }
-                              # },
