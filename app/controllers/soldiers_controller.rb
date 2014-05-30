@@ -3,7 +3,7 @@ class SoldiersController < ApplicationController
   before_action :attributes, only: [:update, :create]
 
   def index
-    @soldiers = Soldier.all
+    @soldiers = Soldier.search_by_name_with_rank(params[:which])
     authorize @soldiers
   end
 
