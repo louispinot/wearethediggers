@@ -64,13 +64,10 @@
         <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
 
 
-            <ul class="grid effect-4" id="grid">
-              <% @pictures.each do |pic| %>
-              <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
-              <% end %>
-            </ul>
-
-            <%= will_paginate @posts %>
+            <div id="pictures">
+              <%= render @pictures %>
+            </div>
+            <%= will_paginate @pictures %>
 
 
           </div><!-- /main -->
@@ -78,12 +75,6 @@
       </div><!-- /st-content -->
   </div><!-- /st-pusher -->
 </div><!-- /st-container -->
-<script>
-  new AnimOnScroll( document.getElementById( 'grid' ), {
-    minDuration : 0.4,
-    maxDuration : 0.7,
-    viewportFactor : 0.2
-  } );
-</script>
+
 <script src="assets/classie.js"></script>
 <script src="assets/sidebarEffects.js"></script>
