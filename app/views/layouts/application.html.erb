@@ -4,9 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>We are the diggers</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag %>
   <%= csrf_meta_tags %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
   <link rel="shortcut icon" href="../favicon.ico">
 </head>
 <body>
@@ -69,9 +70,9 @@
   <div class="container-fluid rm-padding">
     <%= yield %>
   </div>
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  (c) Thuillier image/s courtesy of the Kerry Stokes Collection
-The Louis and Antoinette Thuillier Collection (Australian War Memorial
+<nav class="navbar navbar-default navbar-fixed-bottom text-center" role="navigation">
+  &copy Thuillier images courtesy of the Kerry Stokes Collection
+The Louis and Antoinette Thuillier Collection (Australian War Memorial)
 </nav>
 </body>
 </html>

@@ -13,8 +13,7 @@
 
  *= require 'bootstrap.min'
  *= require 'flat-ui'
- *= require 'default'
- *= require 'component'
+
 
 
  *= require 'normalize'

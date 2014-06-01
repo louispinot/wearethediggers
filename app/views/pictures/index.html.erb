@@ -64,23 +64,17 @@
         <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
 
             <div id="pictures">
-              <ul class="grid effect-4" id="grid">
                 <%= render @pictures %>
-              </ul>
             </div>
             <%= will_paginate @pictures %>
+            <div id="spacer"></div>
+
 
           </div><!-- /main -->
         </div><!-- /st-content-inner -->
       </div><!-- /st-content -->
   </div><!-- /st-pusher -->
 </div><!-- /st-container -->
-<script>
-  new AnimOnScroll( document.getElementById( 'grid' ), {
-    minDuration : 0.4,
-    maxDuration : 0.7,
-    viewportFactor : 0.2
-  } );
-</script>
+
 <script src="assets/classie.js"></script>
 <script src="assets/sidebarEffects.js"></script>

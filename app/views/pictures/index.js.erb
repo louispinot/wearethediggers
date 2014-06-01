@@ -1,5 +1,5 @@
 $('#pictures').append('<%= j render(@pictures) %>');
-<% if @pictures.next_page %>
+<% if @products.next_page %>
   $('.pagination').replaceWith('<%= j will_paginate(@pictures) %>');
 <% else %>
   $('.pagination').remove();
