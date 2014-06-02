@@ -35,6 +35,8 @@ gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'formtastic', github: 'justinfrench/formtastic'
 
+gem 'activerecord-session_store'
+
 gem 'better_errors'
 gem 'binding_of_caller'
 

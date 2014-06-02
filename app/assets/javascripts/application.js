@@ -14,10 +14,13 @@
 //= require jquery_ujs
 
 //= require modernizr.custom
+
 //= require masonry.pkgd.min
+//= require AnimOnScroll
+//= require jquery.infinitescroll.min
+
 //= require imagesloaded
 //= require classie
-//= require AnimOnScroll
 
 //= require sidebarEffects
 

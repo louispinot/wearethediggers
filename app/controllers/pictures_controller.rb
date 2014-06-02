@@ -4,7 +4,12 @@ class PicturesController < ApplicationController
   require 'will_paginate/array'
 
   def index
-    @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 10)
+    if session[:pictures_ids].nil?
+      session[:pictures_ids] = Picture.order('random()').all.map(&:id)
+    end
+
+    @all_pictures = session[:pictures_ids].paginate(:page => params[:page], :per_page => 20)
+    @pictures = Picture.where(id: @all_pictures).all
   end
 
   def show
