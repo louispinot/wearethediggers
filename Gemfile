@@ -51,7 +51,7 @@ gem "pundit"
 
 gem 'pg_search'
 
-gem 'medium-editor-rails', '0.9.3'
+gem 'medium-editor-rails'
 
 gem 'will_paginate', '~> 3.0'
 

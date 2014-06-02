@@ -7,11 +7,13 @@
 
  <%= link_to "Back", soldier_path(@soldier), class: "btn btn-lg btn-primary" %>
 
-<div class="editable"></div>
+<div class="editable">
+  <%= @soldier.bio.html_safe if @soldier.bio %>
+</div>
 
 <%= form_for @soldier do |f| %>
   <%= f.hidden_field :bio, id: "bio"%>
-  <%= f.submit "Submit changes", class: "submit-bio" %>
+  <%= f.submit "Submit changes", class: "submit-bio btn btn-lg btn-primary" %>
 <% end %>
 
 
