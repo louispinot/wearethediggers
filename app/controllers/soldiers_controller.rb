@@ -8,8 +8,6 @@ class SoldiersController < ApplicationController
   end
 
   def search
-    # if params[:query] == "" && params[:service_number] == ""
-    #   @soldiers = Soldier.all
     if params[:query] == ""
       @soldiers = Soldier.all
     else
@@ -26,7 +24,6 @@ class SoldiersController < ApplicationController
       format.html { render :index }
       format.js { @articles }
     end
-
   end
 
   def show

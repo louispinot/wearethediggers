@@ -59,7 +59,7 @@ gem 'chosen-rails'
 
 gem 'acts-as-taggable-on'
 
-gem 'nokigiri'
-gem 'open-uri'
+gem 'nokogiri'
+require 'open-uri' ## @Manu: ne soit pas étonné que j'ai mis 'require', ce n'est pas une erreur!
 
 

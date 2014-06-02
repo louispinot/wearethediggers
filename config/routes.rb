@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
   resources :pictures
+  resources :pictures do
+    get 'search', on: :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
