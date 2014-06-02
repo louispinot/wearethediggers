@@ -24,4 +24,6 @@
 //= require bootstrap.min
 //= require medium-editor
 //= require_self
+//= require chosen-jquery
+//= require app/chosen-scaffold
 

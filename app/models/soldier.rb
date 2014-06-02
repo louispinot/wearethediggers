@@ -20,4 +20,8 @@ class Soldier < ActiveRecord::Base
                                   prefix: true
                                   }
                               }
+
+    scope :unit, ->(unit) { where("unit = ?", unit) }
+
+
 end

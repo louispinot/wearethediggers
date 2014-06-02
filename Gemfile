@@ -55,3 +55,5 @@ gem 'medium-editor-rails'
 
 gem 'will_paginate', '~> 3.0'
 
+gem 'chosen-rails'
+
