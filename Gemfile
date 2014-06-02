@@ -57,3 +57,9 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'chosen-rails'
 
+gem 'acts-as-taggable-on'
+
+gem 'nokigiri'
+gem 'open-uri'
+
+
