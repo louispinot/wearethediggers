@@ -9,6 +9,10 @@ class SoldierPolicy < ApplicationPolicy
     user
   end
 
+  def search?
+    user
+  end
+
   def show?
     user
   end

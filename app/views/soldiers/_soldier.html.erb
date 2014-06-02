@@ -1,0 +1,9 @@
+
+ <div class="soldier">
+    <p><strong><%= link_to ("#{soldier.rank} #{soldier.first_name} #{soldier.last_name}"), soldier_path(soldier)%></strong></p>
+    <p>Unit: <%= soldier.unit %></p>
+    <p>Service number: <%= soldier.service_number %></p>
+    <p>Date and place of death: <%= soldier.date_of_death %>, <%= soldier.place_of_death %></p>
+    <p>Place of burial : <%= (soldier.cemetery == "")? "Unknown" : soldier.cemetery %></p>
+ </div>
+ <br>

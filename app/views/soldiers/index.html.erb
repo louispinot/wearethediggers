@@ -1,13 +1,29 @@
 <h1>Soldiers#index</h1>
 
+<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+  <%= label_tag :query_type, "Search by:  " %>
+  <%= select_tag(:query_type, options_for_select([['Name and Rank', 1], ['Service Number', 2]], 1)) %>
+<% end %>
 
-<%= @soldiers.each do |soldier| %>
- <div class="soldier">
-    <p><strong><%= link_to ("#{soldier.rank} #{soldier.first_name} #{soldier.last_name}"), soldier_path(soldier)%></strong></p>
-    <p><%= soldier.unit %>;   Service number: <%= soldier.service_number %></p>
-    <p>Date and place of death: <%= soldier.date_of_death %>, <%= soldier.place_of_death %></p>
-    <p>Place of burial : <%= (soldier.cemetery == "")? "Unknown" : soldier.cemetery %></p>
- </div>
- <br>
 
-<%end%>
+<%#######################################################%>
+
+<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+  <%= label_tag :query, "Search by name and rank: " %>
+  <%= text_field_tag :query, (params[:query] ? params[:query] : ""), class: 'search-box' %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+  <%= label_tag :service_number, "Search by service number: " %>
+  <%= text_field_tag :service_number, (params[:service_number] ? params[:service_number] : ""), class: 'search-box' %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+
+<div id="soldiers-search-results">
+
+    <%= render @soldiers %>
+
+</div>

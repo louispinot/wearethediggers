@@ -1,0 +1,7 @@
+$('#soldiers-search-results').html('<%= j render @soldiers %>').hide
+
+if ($('#soldiers-search-results').html() == "") {
+  $('#soldiers-search-results').html('<p>Sorry, there are no matching elements.</p>').display
+} else {
+    $('#soldiers-search-results').display
+}
