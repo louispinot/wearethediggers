@@ -17,11 +17,19 @@
  *= require 'component'
 
 
+ *= require 'normalize'
+ *= require 'demo'
+ *= require 'icons'
+ *= require 'component2'
+
+
 
  *= require_tree ./app
  *= require_self
 
 
- *= require medium-editor/medium-editor
- *= require medium-editor/themes/flat
  */
+
+.rm-padding{
+  padding: 0;
+}

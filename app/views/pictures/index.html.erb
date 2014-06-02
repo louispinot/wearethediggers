@@ -1,16 +1,101 @@
-<!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
-  <ul class="grid effect-4" id="grid">
-    <% @pictures.each do |pic| %>
-      <!-- <li><%= image_tag pic.picture_url %></li> -->
-      <li><%=link_to( image_tag(pic.picture_url), picture_path(pic) ) %></li>
+<div id="st-container" class="st-container">
+  <!--
+    example menus
+    these menus will be on top of the push wrapper
+  -->
 
-    <% end %>
-  </ul>
+  <nav class="st-menu st-effect-4" id="menu-4">
+    <div class="todo">
+      <div class="todo-search">
+        <input class="todo-search-field" type="search" value="" placeholder="Search">
+      </div>
+      <ul>
+        <li class="todo-done">
+          <div class="todo-icon fui-user"></div>
+          <div class="todo-content">
+            <h4 class="todo-name">
+              Meet <strong>Adrian</strong> at <strong>6pm</strong>
+            </h4>
+            Times Square
+          </div>
+        </li>
+        <li class="">
+          <div class="todo-icon fui-list"></div>
+          <div class="todo-content">
+            <h4 class="todo-name">
+              Chat with <strong>V.Kudinov</strong>
+            </h4>
+            Skype conference an 9 am
+          </div>
+        </li>
+        <li class="">
+          <div class="todo-icon fui-eye"></div>
+          <div class="todo-content">
+            <h4 class="todo-name">
+              Watch <strong>Iron Man</strong>
+            </h4>
+            1998 Broadway
+          </div>
+        </li>
+        <li class="">
+          <div class="todo-icon fui-time"></div>
+          <div class="todo-content">
+            <h4 class="todo-name">
+              Fix bug on a <strong>Website</strong>
+            </h4>
+            As soon as possible
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-warning">Filter</button>
+  </nav>
+  <!-- content push wrapper -->
+  <div class="st-pusher">
+      <div class="st-content"><!-- this is the wrapper for the content -->
+        <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+          <div class="main clearfix">
+            <div id="st-trigger-effects" class="column">
 
-  <script>
-    new AnimOnScroll( document.getElementById( 'grid' ), {
-      minDuration : 0.4,
-      maxDuration : 0.7,
-      viewportFactor : 0.2
-    } );
-  </script>
+              <button class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
+
+            </div>
+
+        <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
+
+
+            <ul class="grid effect-4" id="grid">
+              <% @pictures.each do |pic| %>
+              <li><%=link_to( image_tag(pic.picture_url), picture_path(pic), anchor:"#disqus_thread") %></li>
+              <% end %>
+            </ul>
+
+            <%= will_paginate @posts %>
+
+
+          </div><!-- /main -->
+        </div><!-- /st-content-inner -->
+      </div><!-- /st-content -->
+  </div><!-- /st-pusher -->
+</div><!-- /st-container -->
+<script>
+  new AnimOnScroll( document.getElementById( 'grid' ), {
+    minDuration : 0.4,
+    maxDuration : 0.7,
+    viewportFactor : 0.2
+  } );
+</script>
+<script src="assets/classie.js"></script>
+<script src="assets/sidebarEffects.js"></script>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wearethediggers'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>

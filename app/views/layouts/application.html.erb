@@ -6,6 +6,8 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../favicon.ico">
 </head>
 <body>
 
@@ -64,7 +66,7 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <div class="container-fluid">
+  <div class="container-fluid rm-padding">
     <%= yield %>
   </div>
 

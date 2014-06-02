@@ -8,6 +8,7 @@ ActiveAdmin.register Picture do
 
   end
 
+
   # permit_params do
   #     params = [:description]
   #     if current_user.admin?

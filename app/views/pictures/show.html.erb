@@ -1,15 +1,36 @@
-<div class"container-fluid">
-  <div class="row">
-    <div id="picture-wraper">
-      <div id="desc-box" class="col-md-4">
-        <h6><%= @picture.ref %></h6>
-        <p>
-          <%= @picture.description %>
-        </p>
-      </div>
-      <div id="">
+<div class="row">
+  <div id="picture-wraper">
+    <div class="text-center">
         <%= image_tag @picture.picture_url, id:"picture-box" %>
+      <div id="desc-box" class="col-md-4 center-block" >
+          <h6><%= @picture.ref %></h6>
+          <p>
+            <%= @picture.description %>
+          </p>
+        </div>
+          <%= link_to "< Back to pictures", pictures_path, class: "btn btn-sm btn-primary back-btn" %>
+        </div>
+        <div>
+          <%= link_to "* Add to Favorites", pictures_path, class: "btn btn-sm btn-warning favorites-btn" %>
+        </div>
       </div>
     </div>
   </div>
+
+<div class="col-md-6 col-md-offset-3">
+  <%= render 'disqus/thread'%>
 </div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wearethediggers'; // required: replace example with your forum shortname
+    var disqus_url = <%= pictures_path(@picture) %> ;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
