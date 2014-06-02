@@ -1,3 +1,16 @@
-// Place all the styles related to the soldiers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.soldier {
+  background-color: #34495e;
+  color: #FFFFFF;
+  padding:1.5em;
+  height: 300px;
+
+}
+
+.soldier-grid {
+  padding:0.7em;
+}
+
+.soldier-detail {
+  padding-left: 1.5em;
+}

@@ -1,29 +1,32 @@
-<h1>Soldiers#index</h1>
 
-<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
-  <div>
-    <h2>Search soldiers</h2>
-    <%= label_tag :query_type, "Search by:" %>
-    <%= select_tag(:query_type, options_for_select([['Name and Rank', 1], ['Service Number', 2]], 1)) %>
-    <%= text_field_tag :query, (params[:query] ? params[:query] : ""), class: 'search-box' %>
+<div class="container">
+  <div class="row">
+    <%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+      <h2>Search soldiers</h2>
+      <div class="col-md-5 col-md-offset-1">
+        <%= label_tag :query_type, "Search by:" %>
+        <%= select_tag(:query_type, options_for_select([['Name and Rank', 1], ['Service Number', 2]], 1)) %>
+        <%= text_field_tag :query, (params[:query] ? params[:query] : ""), class: 'search-box' %>
+      </div>
+      <div class="col-md-4">
+        <%= label_tag :unit, "Filter by unit:" %>
+        <%= select_tag(:unit,
+            options_from_collection_for_select(@soldiers, "unit", "unit"), include_blank: true,
+            class: 'chosen-select') %>
+      </div>
+      <div class="col-md-2">
+        <%= submit_tag "Search", class: "btn btn-lg btn-primary"%>
+      </div>
 
-    <div>
-      <%= label_tag :unit, "Filter by unit:" %>
-      <%= select_tag(:unit,
-          options_from_collection_for_select(@soldiers, "unit", "unit"), include_blank: true,
-          class: 'chosen-select') %>
-    </div>
+    <% end %>
   </div>
-  <%= submit_tag "Search" %>
-
-<% end %>
-
 
 <%#######################################################%>
 
 
-<div id="soldiers-search-results">
+    <div id="soldiers-search-results row">
 
-    <%= render @soldiers %>
+        <%= render @soldiers %>
 
-</div>
+    </div>
+</div> <!-- /CONTAINER -->
