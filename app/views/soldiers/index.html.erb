@@ -1,6 +1,14 @@
 <h1>Soldiers#index</h1>
 
 <%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+  <%= label_tag :query_type, "Search by:  " %>
+  <%= select_tag(:query_type, options_for_select([['Name and Rank', 1], ['Service Number', 2]], 1)) %>
+<% end %>
+
+
+<%#######################################################%>
+
+<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
   <%= label_tag :query, "Search by name and rank: " %>
   <%= text_field_tag :query, (params[:query] ? params[:query] : ""), class: 'search-box' %>
   <%= submit_tag "Search" %>
