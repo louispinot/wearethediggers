@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   resources :soldiers do
     get 'search', on: :collection
-    get :autocomplete_soldier_first_name, :on => :collection
+    get :autocomplete_name, :on => :collection
+    get :autocomplete_unit, :on => :collection
+    get :autocomplete_rank, :on => :collection
   end
   resources :pictures
   resources :pictures do

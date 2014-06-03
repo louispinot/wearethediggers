@@ -26,6 +26,5 @@
 //= require medium-editor
 //= require_self
 //= require chosen-jquery
-//= require app/chosen-scaffold
 //= require autocomplete-rails
-
+//= require_tree ./app/

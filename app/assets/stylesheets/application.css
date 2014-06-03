@@ -16,6 +16,13 @@
  *= require 'default'
  *= require 'component'
 
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require jquery.ui.autocomplete
+ *= require jquery.ui.button
+ *= require jquery.ui.datepicker
+ *= require jquery.ui.dialog
+
  *= require 'normalize'
  *= require 'demo'
  *= require 'icons'

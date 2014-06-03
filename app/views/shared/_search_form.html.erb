@@ -1,0 +1,21 @@
+<%= form_tag search_soldiers_path, :method => :get, :remote => true, class: 'soldier-search-form'  do %>
+<h2>Search soldiers</h2>
+<div>
+  <%= label_tag :name_query, "Search by name:" %>
+  <%= autocomplete_field_tag :name_query, params[:name_query], autocomplete_name_soldiers_path, :size => 75, class: "autocomplete search-box" %>
+</div>
+<div>
+  <%= label_tag :service_number, "Search by service number:" %>
+  <%= text_field_tag :service_number, params[:service_number], class: 'search-box' %>
+</div>
+<div>
+  <%= label_tag :unit, "Filter by unit:" %>
+  <%= autocomplete_field_tag :unit, '', autocomplete_unit_soldiers_path, :size => 75, class: "autocomplete search-box" %>
+</div>
+<div>
+  <%= label_tag :rank, "Filter by rank:" %>
+  <%= autocomplete_field_tag :rank, '', autocomplete_rank_soldiers_path, :size => 75, class: "autocomplete search-box" %>
+</div>
+<%= submit_tag "Search" %>
+
+<% end %>

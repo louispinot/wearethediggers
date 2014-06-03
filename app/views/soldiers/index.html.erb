@@ -1,25 +1,7 @@
 <h1>Soldiers#index</h1>
 
-<%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
-  <%= autocomplete_field_tag 'First name', '', autocomplete_soldier_first_name_soldiers_path, :size => 75 %>
 
-  <div>
-    <h2>Search soldiers</h2>
-    <%= label_tag :query_type, "Search by:" %>
-    <%= select_tag(:query_type, options_for_select([['Name and Rank', 1], ['Service Number', 2]], 1)) %>
-    <%= text_field_tag :query, (params[:query] ? params[:query] : ""), class: 'search-box' %>
-
-    <div>
-      <%= label_tag :unit, "Filter by unit:" %>
-      <%= select_tag(:unit,
-          options_from_collection_for_select(@soldiers, "unit", "unit"), include_blank: true,
-          class: 'chosen-select') %>
-    </div>
-  </div>
-  <%= submit_tag "Search" %>
-
-<% end %>
-
+<%= render partial: 'shared/search_form' %>
 
 <%#######################################################%>
 

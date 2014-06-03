@@ -2,7 +2,24 @@ class SoldiersController < ApplicationController
   before_action :find_soldier, only: [:show, :edit, :update, :destroy]
   before_action :attributes, only: [:update, :create]
 
-  autocomplete :soldier, :first_name, full: true
+  def autocomplete_name
+    soldiers = Soldier.search_by_name(params[:term])
+    render :json => soldiers.map { |soldier| { :id => soldier.id, :label => "#{soldier.rank} #{soldier.full_name}"  , :value => soldier.full_name } }
+  end
+
+  def autocomplete_unit
+    soldiers = Soldier.filter_by_unit(params[:term])
+    units = soldiers.map {|soldier| soldier.unit}
+    units = units.uniq!
+    render :json => units.map { |unit| { :label => unit, :value => unit} }
+  end
+
+  def autocomplete_rank
+    soldiers = Soldier.filter_by_rank(params[:term])
+    ranks = soldiers.map {|soldier| soldier.rank}
+    ranks = ranks.uniq!
+    render :json => ranks.map { |rank| { :label => rank, :value => rank} }
+  end
 
   def index
     @soldiers = Soldier.all
@@ -10,17 +27,18 @@ class SoldiersController < ApplicationController
   end
 
   def search
-    if params[:query] == ""
+    if (params[:name_query] == "" && params[:service_number] == "")
       @soldiers = Soldier.all
     else
-      if params[:query_type] == '1'
-        @soldiers = Soldier.search_by_name_with_rank(params[:query])
-      elsif params[:query_type] == '2'
-        @soldiers = Soldier.search_by_service_number(params[:query])
+      if (params[:name_query] != "" && params[:service_number] == "")
+        @soldiers = Soldier.search_by_name(params[:name_query])
+      elsif (params[:name_query] == "" && params[:service_number] != "")
+        @soldiers = Soldier.search_by_service_number(params[:service_number])
       end
     end
 
     @soldiers = @soldiers.unit(params[:unit]) unless params[:unit] == ''
+    @soldiers = @soldiers.rank(params[:rank]) unless params[:rank] == ''
 
     respond_to do |format|
       format.html { render :index }
