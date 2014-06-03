@@ -21,14 +21,15 @@
   min-height: 20%;
 }
 
-.call-to-action {
+#call-to-action {
   margin-top: 15%;
+  margin-left: 5%;
   padding: 1em;
   background-color: rgba(52, 73, 94, 0.7);
   color:#FFF;
 }
 
-.call-to-action a {
+#call-to-action a {
   margin-left:1em;
 }
 

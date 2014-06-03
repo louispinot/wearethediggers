@@ -21,7 +21,7 @@
  *= require 'demo'
  *= require 'icons'
  *= require 'component2'
-
+ *= require 'jquery.capty'
 
 
  *= require_tree ./app

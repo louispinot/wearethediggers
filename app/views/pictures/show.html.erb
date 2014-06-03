@@ -1,25 +1,30 @@
+<!-- MAIN  ################################################################# -->
+
 <div class="row">
-  <div id="picture-wraper">
-    <div class="text-center">
-        <%= image_tag @picture.picture_url, id:"picture-box" %>
-      <div id="desc-box" class="col-md-4 center-block" >
-          <h6><%= @picture.ref %></h6>
-          <p>
-            <%= @picture.description %>
-          </p>
-        </div>
-          <%= link_to "< Back to pictures", pictures_path, class: "btn btn-sm btn-primary back-btn" %>
-        </div>
-        <div>
+      <div class="col-md-6 col-md-offset-3 text-center center">
+        <%= image_tag @picture.picture_url, alt: @picture.description, id:"picture-box", name:"#capty-caption"  %>
+          <div id="capty-caption">
+            <h6><%= @picture.ref %></h6>
+            <p>
+              <%= @picture.description %>
+            </p>
+          </div>
+      </div><!-- text-center -->
+        <%= link_to "< Back to pictures", pictures_path, class: "btn btn-sm btn-primary back-btn" %>
           <%= link_to "* Add to Favorites", pictures_path, class: "btn btn-sm btn-warning favorites-btn" %>
-        </div>
-      </div>
-    </div>
-  </div>
+</div><!-- row -->
+
+<!-- SPACER  ############################################################### -->
+
+<div id="spacer"></div>
+
+<!-- DISQUS  ############################################################### -->
 
 <div class="col-md-6 col-md-offset-3">
   <%= render 'disqus/thread'%>
 </div>
+
+<!-- DISQUS SCRIPT  ######################################################## -->
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -33,4 +38,16 @@
         s.src = '//' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
-    </script>
+</script>
+
+<!-- ANIMATED CAPTION SCRIPT ############################################### -->
+
+<script type="text/javascript">
+  $(function() {
+    $('#picture-box').capty({
+      animation: 'fade',
+      speed:    400,
+      height:   300
+    });
+  });
+</script>
