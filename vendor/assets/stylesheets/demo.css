@@ -12,7 +12,7 @@
 
 body {
 	background: #FFF;
-	color: #48a770;
+	color: #48c9b0;
 	font-weight: 300;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 }
@@ -24,7 +24,7 @@ a {
 }
 
 a:hover, a:focus {
-	color: #48a770;
+	color: #16a085;
 	outline: none;
 }
 

@@ -34,3 +34,6 @@
 //= require chosen-jquery
 //= require app/chosen-scaffold
 
+//= require_tree ./app
+
+

@@ -3,8 +3,9 @@ class SoldiersController < ApplicationController
   before_action :attributes, only: [:update, :create]
 
   def index
-    @soldiers = Soldier.all
+    @soldiers = Soldier.order("last_name").page(params[:page]).per_page(10)
     authorize @soldiers
+
   end
 
   def search

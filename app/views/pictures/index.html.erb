@@ -49,37 +49,21 @@
 $(function() {
   var $grid = $('.grid');
 
-  /*
-  var scrollAnim = new AnimOnScroll($grid[0], {
-    minDuration : 0.4,
-    maxDuration : 0.7,
-    viewportFactor : 0.2
-  });
-  */
-
-
-
-  function fadePicturesIn($pictures)
-  {
-    $pictures.css({ opacity: 1 });
-  }
-
 
   $grid.imagesLoaded(function() {
     $grid.masonry({
       itemSelector: 'li'
     });
 
-    //fadePicturesIn($grid.find('li'));
   });
 
 
-  $grid.infinitescroll({
-    navSelector: '.pagination',
-    nextSelector: '.pagination .next_page',
-    itemSelector: '.grid > li',
-    bufferPx: 300
-  },
+  // $grid.infinitescroll({
+  //   navSelector: '.pagination',
+  //   nextSelector: '.pagination .next_page',
+  //   itemSelector: '.grid > li',
+  //   bufferPx: 300
+  // },
 
   function(newElements) {
     var $pictures = $(newElements);

@@ -1,10 +1,8 @@
-
-.soldier {
-  background-color: #34495e;
-  color: #FFFFFF;
-  padding:1.5em;
-  height: 300px;
-
+#soldier {
+  background-color: rgba(0,39,59,.35);
+  color: #fff;
+  padding:1em;
+  min-height: 300px;
 }
 
 .soldier-grid {
@@ -13,4 +11,10 @@
 
 .soldier-detail {
   padding-left: 1.5em;
+  color: #fff;
+}
+
+.soldier-card{
+  background-color: rgba(0,39,59,.35);
+  color: black;
 }

@@ -28,7 +28,10 @@
 
     <div id="soldiers-search-results row">
 
+      <div>
         <%= render @soldiers %>
+      </div>
+      <%= will_paginate @soldiers %>
 
     </div>
 </div> <!-- /CONTAINER -->

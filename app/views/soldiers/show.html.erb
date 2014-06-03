@@ -1,18 +1,46 @@
-<h1><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h1>
+<div id="soldier" class="panel panel- col-md-6 col-md-offset-3">
+  <h1><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h1>
 
- <div class="soldier">
-    <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
-    <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
-    <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
- </div>
+   <div>
+      <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
+      <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
+      <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
+   </div>
 
- <%= link_to "Back", soldiers_path, class: "btn btn-lg btn-primary" %>
+   <%= link_to "Back", soldiers_path, class: "btn btn-lg btn-primary" %>
 
- <% if current_user.superuser? %>
-  <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-lg btn-danger" %>
-<%end%>
+   <% if current_user.superuser? %>
+    <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-lg btn-danger" %>
+  <%end%>
+</div>
 
 
 <%= content_tag('div', class: "bio-in-html") do  -%>
   <%= @soldier.bio.html_safe if @soldier.bio %>
 <% end %>
+
+<!-- SPACER  ############################################################### -->
+
+<div id="spacer"></div>
+
+<!-- DISQUS  ############################################################### -->
+
+<div class="col-md-6 col-md-offset-3">
+  <%= render 'disqus/thread'%>
+</div>
+
+<!-- DISQUS SCRIPT  ######################################################## -->
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wearethediggers'; // required: replace example with your forum shortname
+    var disqus_url = <%= soldiers_path(@soldier) %> ;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
