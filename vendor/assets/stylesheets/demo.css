@@ -19,12 +19,12 @@ body {
 
 a {
 	text-decoration: none;
-	color: #48a770;
+	color: rgba(0,39,59,.35);
 	outline: none;
 }
 
 a:hover, a:focus {
-	color: #2c774b;
+	color: #48a770;
 	outline: none;
 }
 

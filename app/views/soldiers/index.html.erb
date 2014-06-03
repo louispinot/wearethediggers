@@ -12,7 +12,9 @@
         <%= label_tag :unit, "Filter by unit:" %>
         <%= select_tag(:unit,
             options_from_collection_for_select(@soldiers, "unit", "unit"), include_blank: true,
-            class: 'chosen-select') %>
+            class: 'chosen-select tagsinput') %>
+
+        <%=select_tag :unit, options_from_collection_for_select(@soldiers, "unit", "unit"), include_blank: true, :multiple => true, :size => 10, class: 'chosen-select tagsinput'%>
       </div>
       <div class="col-md-2">
         <%= submit_tag "Search", class: "btn btn-lg btn-primary"%>
@@ -30,3 +32,8 @@
 
     </div>
 </div> <!-- /CONTAINER -->
+
+
+<script>
+  $(".tagsinput").tagsInput();
+</script>
