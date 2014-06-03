@@ -24,6 +24,7 @@
 
 
  *= require 'masonry/transitions'
+ *= require 'masonry/gutters'
 
  *= require_tree ./app
  *= require_self

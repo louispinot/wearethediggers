@@ -44,3 +44,8 @@ top: 170px;
   color: #fff;
   margin-left: 15px;
 }
+
+#button-open-sidebar{
+position: absolute;
+right: 680px;
+}
