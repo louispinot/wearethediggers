@@ -22,7 +22,7 @@
               <button class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
             </div>
         <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
-            <ul class="grid effect-4" id="grid">
+            <ul class="grid effect-4 transitions-enabled" id="grid">
               <%= render @pictures %>
             </ul>
             <%= will_paginate @all_pictures %>
@@ -34,47 +34,8 @@
 
 
 <script>
-$(function() {
-  var $grid = $('.grid');
 
-
-  $grid.imagesLoaded(function() {
-    $grid.masonry({
-      itemSelector: 'li'
-    });
-
-  });
-
-
-  // $grid.infinitescroll({
-  //   navSelector: '.pagination',
-  //   nextSelector: '.pagination .next_page',
-  //   itemSelector: '.grid > li',
-  //   bufferPx: 300
-  // },
-
-  function(newElements) {
-    var $pictures = $(newElements);
-
-    $grid.imagesLoaded(function() {
-      $grid.masonry('appended', $pictures);
-    });
-  });
-})
 </script>
 
 <script src="assets/classie.js"></script>
 <script src="assets/sidebarEffects.js"></script>
-<script type="text/javascript">
-
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'wearethediggers'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>

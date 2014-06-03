@@ -60,5 +60,6 @@ gem 'will_paginate', '~> 3.0'
 gem 'chosen-rails'
 
 gem 'jquery-turbolinks'
-
 gem 'turbolinks'
+gem 'masonry-rails', '~> 0.2.0'
+

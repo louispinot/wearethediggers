@@ -14,13 +14,15 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require masonry/jquery.masonry
+//= require masonry/jquery.infinitescroll.min
 //= require jquery.capty
 
 
 //= require modernizr.custom
 
 //= require masonry.pkgd.min
-//= require AnimOnScroll
+
 //= require jquery.infinitescroll.min
 
 //= require imagesloaded
@@ -33,6 +35,8 @@
 //= require_self
 //= require chosen-jquery
 //= require app/chosen-scaffold
+
+
 
 //= require_tree ./app
 
