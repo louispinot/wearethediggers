@@ -1,15 +1,25 @@
- // # Place all the behaviors and hooks related to the matching controller here.
- // # All this logic will automatically be available in application.js.
- // # You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).ready(function(){
+ // Deals with the medium-editor.js for editing soldier bio
+  $('.submit-bio').on("click", function(){
+    var bioHTML = $('.editable').html();
+    $('#bio').val(bioHTML);
+  });
+
+// bind search form submit to pressiong enter on index view
+  $('.search-box').keypress(function (e) {
+  if (e.which == 13) {
+    $(self).parent.submit();
+  }
+});
 
 
-$(function(){
 
-  var $container = $('#grid');
+
+  var $container = $('#soldiers');
 
   $container.imagesLoaded(function(){
     $container.masonry({
-      itemSelector: '.box',
+      itemSelector: '.soldier-card',
       isFitWidth: true
     });
   });
@@ -17,7 +27,7 @@ $(function(){
   $container.infinitescroll({
     navSelector  : '.pagination',    // selector for the paged navigation
     nextSelector : '.next_page',  // selector for the NEXT link (to page 2)
-    itemSelector : '.box',     // selector for all items you'll retrieve
+    itemSelector : '.soldier-card',     // selector for all items you'll retrieve
     loading: {
         finishedMsg: "Congratulations you've seen all the collection" ,
       }
