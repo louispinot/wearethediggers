@@ -1,8 +1,17 @@
-var $pictures = '<%= j render(@pictures) %>';
-$('#masonry-container').append($pictures).masonry('appended', $pictures);
+// var $pictures = '<%= j render(@pictures) %>';
+// $('#masonry-container').append($pictures).masonry('appended', $pictures);
 
+// <% if @pictures.next_page %>
+//   $('.pagination').replaceWith('<%= j will_paginate(@pictures) %>');
+// <% else %>
+//   $('.pagination').remove();
+// <% end %>
+
+
+$('#grid').append('<%= j render(@pictures) %>');
 <% if @pictures.next_page %>
   $('.pagination').replaceWith('<%= j will_paginate(@pictures) %>');
 <% else %>
   $('.pagination').remove();
 <% end %>
+<% sleep 1 %>

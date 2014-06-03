@@ -7,9 +7,7 @@ class PicturesController < ApplicationController
     if session[:pictures_ids].nil?
       session[:pictures_ids] = Picture.order('random()').all.map(&:id)
     end
-
-    @all_pictures = session[:pictures_ids].paginate(:page => params[:page], :per_page => 20)
-    @pictures = Picture.where(id: @all_pictures).all
+    @pictures = Picture.where(id: session[:pictures_ids]).all.paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
