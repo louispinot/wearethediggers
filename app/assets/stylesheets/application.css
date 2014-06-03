@@ -23,6 +23,7 @@
  *= require 'component2'
 
 
+ *= require 'masonry/transitions'
 
  *= require_tree ./app
  *= require_self

@@ -56,58 +56,20 @@
         <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
           <div class="main clearfix">
             <div id="st-trigger-effects" class="column">
-
               <button class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
-
             </div>
-
         <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
-
-
-            <ul class="grid effect-4" id="grid">
-              <% @pictures.each do |pic| %>
-                <li>
-                  <%=link_to( image_tag(pic.picture_url), picture_path(pic), anchor:"#disqus_thread") %>
-                </li>
-              <% end %>
+            <ul class="grid effect-4 transitions-enabled" id="grid">
+              <%= render @pictures %>
             </ul>
-
             <%= will_paginate @all_pictures %>
-
-
           </div><!-- /main -->
         </div><!-- /st-content-inner -->
       </div><!-- /st-content -->
   </div><!-- /st-pusher -->
 </div><!-- /st-container -->
 <script>
-$(function() {
-  var $grid = $('.grid');
 
-
-  $grid.imagesLoaded(function() {
-    $grid.masonry({
-      itemSelector: 'li'
-    });
-
-  });
-
-
-  // $grid.infinitescroll({
-  //   navSelector: '.pagination',
-  //   nextSelector: '.pagination .next_page',
-  //   itemSelector: '.grid > li',
-  //   bufferPx: 300
-  // },
-
-  function(newElements) {
-    var $pictures = $(newElements);
-
-    $grid.imagesLoaded(function() {
-      $grid.masonry('appended', $pictures);
-    });
-  });
-})
 </script>
 
 <script src="assets/classie.js"></script>
