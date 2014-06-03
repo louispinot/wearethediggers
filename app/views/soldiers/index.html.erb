@@ -1,6 +1,8 @@
 <h1>Soldiers#index</h1>
 
 <%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
+  <%= autocomplete_field_tag 'First name', '', autocomplete_soldier_first_name_soldiers_path, :size => 75 %>
+
   <div>
     <h2>Search soldiers</h2>
     <%= label_tag :query_type, "Search by:" %>

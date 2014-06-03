@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 
 //= require modernizr.custom
 //= require masonry.pkgd.min
@@ -26,4 +27,5 @@
 //= require_self
 //= require chosen-jquery
 //= require app/chosen-scaffold
+//= require autocomplete-rails
 

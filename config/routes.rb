@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root 'home#index'
+
   resources :soldiers do
     get 'search', on: :collection
+    get :autocomplete_soldier_first_name, :on => :collection
   end
   resources :pictures
   resources :pictures do

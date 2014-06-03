@@ -41,18 +41,16 @@
 # # user = User.create(email: "admin@admin.com", password: "0000", superuser: true, admin: true, first_name: 'The', last_name: 'Admin')
 
 
-Picture.all.each do |picture|
-  ref = picture.ref
-  url = "http://www.awm.gov.au/collection/#{ref}/"
+# require 'json'
 
-  doc = Nokogiri::HTML(open(url))
-
-
-  doc.search(".block block-awm-collection block-awm_collection_related dl ul:nth-child(2)").each do |ul|
-          ul.search("li a").each do |tag|
-            tag = tag.inner_text.strip
-            picture.tag_list.add(tag)
-          end
-        end
-end
+# hash = JSON.parse(File.read("db/picture-tags.json"))
+# hash.each do |key, value|
+#   begin
+#     picture = Picture.find_by_ref(key)
+#     picture.tag_list = value.join(', ')
+#     picture.save
+#   rescue
+#     puts "Picture #{key} not found"
+#   end
+# end
 

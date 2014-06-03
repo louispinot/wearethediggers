@@ -2,6 +2,8 @@ class SoldiersController < ApplicationController
   before_action :find_soldier, only: [:show, :edit, :update, :destroy]
   before_action :attributes, only: [:update, :create]
 
+  autocomplete :soldier, :first_name, full: true
+
   def index
     @soldiers = Soldier.all
     authorize @soldiers
