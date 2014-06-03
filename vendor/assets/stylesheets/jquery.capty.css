@@ -1,9 +1,9 @@
 @CHARSET "UTF-8";
 
 div.capty-caption {
-	background-color: #000;
+	background-color: #34495e;
 	color: #FFF;
-	font: bold 11px verdana;
+	font: 11px verdana;
 	padding: 10px;
 	text-shadow: 1px 1px 0 #222;
 }
