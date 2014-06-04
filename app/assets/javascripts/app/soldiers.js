@@ -20,7 +20,8 @@ $(document).ready(function(){
   $container.imagesLoaded(function(){
     $container.masonry({
       itemSelector: '.soldier-card',
-      isFitWidth: true
+      isFitWidth: true,
+      gutterWidth: 5
     });
   });
 
