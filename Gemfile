@@ -62,7 +62,5 @@ gem 'acts-as-taggable-on'
 gem 'rails3-jquery-autocomplete'
 gem 'jquery-ui-rails'
 
-gem 'nokogiri'
-require 'open-uri' ## @Manu: ne soit pas étonné que j'ai mis 'require', ce n'est pas une erreur!
-
+gem 'multi-select-rails'
 

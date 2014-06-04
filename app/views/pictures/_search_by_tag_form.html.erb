@@ -1,12 +1,17 @@
 <%= form_tag search_pictures_path, :method => :get, :remote => false, class: 'tag-search-form'  do %>
 <h2>Search pictures</h2>
 <div>
-</div>
-<div>
+  <a href='#' id='select-all'>select all</a>
+  <a href='#' id='deselect-all'>deselect all</a>
+
+  <%= p params[:tags] %>
 
 </div>
-  <%= autocomplete_field_tag :tags, '', autocomplete_tags_pictures_path,
-  'data-delimiter' => ',', :multiple => true %>
+<div>
+  <%= select_tag :tags, options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name), :multiple => true, data: {taglist: params[:tags]} %>
+
+</div>
+
 
 <%= submit_tag "Search" %>
 

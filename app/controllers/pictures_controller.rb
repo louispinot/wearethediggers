@@ -5,18 +5,11 @@ class PicturesController < ApplicationController
   before_action :attributes, only: [:update, :create]
   require 'will_paginate/array'
 
-
-  def autocomplete_tags
-    length_index = params[:term].length - 1
-    tags = ActsAsTaggableOn::Tag.all.select {|tag| tag.name[0..length_index].downcase == params[:term].downcase}
-    render :json => tags.map { |tag| { :label => tag.name, :value => tag.name} }
-  end
-
-
   def search
     @pictures = Picture.tagged_with(params[:tags]) #, :match_all => true)
 
     @pictures = @pictures.paginate(:page => params[:page], :per_page => 10)
+    [@pictures, params[:tags]]
 
     respond_to do |format|
       format.html { render :index }
