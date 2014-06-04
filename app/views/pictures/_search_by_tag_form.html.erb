@@ -5,7 +5,7 @@
 <div>
 
 </div>
-  <%= autocomplete_field_tag :tags, '', autocomplete_tags_pictures_path,
+  <%= autocomplete_field_tag :tags, params[:tags], autocomplete_tags_pictures_path,
   'data-delimiter' => ',', :multiple => true %>
 
 <%= submit_tag "Search" %>

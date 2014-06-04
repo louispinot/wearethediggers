@@ -14,9 +14,13 @@ class PicturesController < ApplicationController
 
 
   def search
-    @pictures = Picture.tagged_with(params[:tags]) #, :match_all => true)
+    if params[:tags] == ""
+      @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 10)
+    else
+      @pictures = Picture.tagged_with(params[:tags]) #, :match_all => true)
+      @pictures = @pictures.paginate(:page => params[:page], :per_page => 10)
+    end
 
-    @pictures = @pictures.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html { render :index }
