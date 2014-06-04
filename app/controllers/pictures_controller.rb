@@ -6,24 +6,19 @@ class PicturesController < ApplicationController
   require 'will_paginate/array'
 
 
-  # def search
-  #   if params[:query] == ""
-  #     @soldiers = Soldier.all
-  #   else
-  #     if params[:query_type] == '1'
-  #       @soldiers = Soldier.search_by_name_with_rank(params[:query])
-  #     elsif params[:query_type] == '2'
-  #       @soldiers = Soldier.search_by_service_number(params[:query])
-  #     end
-  #   end
+  def autocomplete_tags
+    tags = ActsAsTaggableOn::Tag.all
+    render :json => tags.map { |tag| { :label => tag.name, :value => tag.name} }
+  end
 
-  #   @soldiers = @soldiers.unit(params[:unit]) unless params[:unit] == ''
 
-  #   respond_to do |format|
-  #     format.html { render :index }
-  #     format.js { @articles }
-  #   end
-  # end
+  def search
+    @pictures = Picture.tagged_with(params[:tags], :match_all => true)
+    @pictures = @pictures.paginate(:page => params[:page], :per_page => 10)
+    respond_to do |format|
+      format.html { render :index }
+    end
+  end
 
   def index
     @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 10)
@@ -60,6 +55,7 @@ class PicturesController < ApplicationController
   private
 
   def find_picture
+
     @picture = Picture.find(params[:id])
   end
 

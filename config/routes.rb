@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     get :autocomplete_rank, :on => :collection
   end
   resources :pictures do
-    get 'search_soldier_for_identification', on: :collection
+    get :search_soldier_for_identification, on: :collection
+    get :search, on: :collection
+    get :autocomplete_tags, on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
