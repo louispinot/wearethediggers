@@ -17,9 +17,9 @@
     </div>
   </div>
 
-    <%= render partial: 'shared/search_form' %>
-    <%= render partial: 'soldier_list_for_identification' %>
-
+    <%= render 'shared/search_form', form_url: search_soldier_for_identification_pictures_path, remote: true %>
+    <div class="soldiers-matched">
+    </div>
 
 
 <div class="col-md-6 col-md-offset-3">

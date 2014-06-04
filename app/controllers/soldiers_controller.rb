@@ -1,4 +1,6 @@
 class SoldiersController < ApplicationController
+  include SoldierSearch
+
   before_action :find_soldier, only: [:show, :edit, :update, :destroy]
   before_action :attributes, only: [:update, :create]
 
@@ -27,15 +29,7 @@ class SoldiersController < ApplicationController
   end
 
   def search
-
-    if params[:name_query] == ''
-      @soldiers = Soldier.all
-    else
-      @soldiers = Soldier.search_by_name(params[:name_query]) unless params[:name_query] == ''
-    end
-    @soldiers = @soldiers.service_number(params[:service_number]) unless params[:service_number] == ''
-    @soldiers = @soldiers.unit(params[:unit]) unless params[:unit] == ''
-    @soldiers = @soldiers.rank(params[:rank]) unless params[:rank] == ''
+    @soldiers = search_soldiers
 
     respond_to do |format|
       format.html { render :index }

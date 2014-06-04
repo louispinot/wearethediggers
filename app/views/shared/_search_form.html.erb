@@ -1,4 +1,4 @@
-<%= form_tag search_soldiers_path, :method => :get, class: 'soldier-search-form'  do %>
+<%= form_tag form_url, :method => :get, class: 'soldier-search-form', remote: remote  do %>
 <h2>Search soldiers</h2>
 <div>
   <%= label_tag :name_query, "Search by name:" %>
