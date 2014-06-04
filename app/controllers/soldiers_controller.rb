@@ -27,15 +27,6 @@ class SoldiersController < ApplicationController
   end
 
   def search
-    # if (params[:name_query] == "" && params[:service_number] == "")
-    #   @soldiers = Soldier.all
-    # else
-    #   if (params[:name_query] != "" && params[:service_number] == "")
-    #     @soldiers = Soldier.search_by_name(params[:name_query])
-    #   elsif (params[:name_query] == "" && params[:service_number] != "")
-    #     @soldiers = Soldier.search_by_service_number(params[:service_number])
-    #   end
-    # end
 
     if params[:name_query] == ''
       @soldiers = Soldier.all
