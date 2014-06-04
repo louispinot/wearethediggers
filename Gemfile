@@ -43,6 +43,9 @@ gem 'binding_of_caller'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
+gem 'jquery-turbolinks'
+gem 'turbolinks'
+
 gem 'thin'
 gem 'rails_12factor', group: :production
 
@@ -60,6 +63,5 @@ gem 'will_paginate', '~> 3.0'
 gem 'chosen-rails'
 
 
-gem 'jquery-turbolinks'
-gem 'turbolinks'
+
 gem 'masonry-rails', '~> 0.2.0'
