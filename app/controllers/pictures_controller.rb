@@ -7,7 +7,8 @@ class PicturesController < ApplicationController
 
 
   def autocomplete_tags
-    tags = ActsAsTaggableOn::Tag.all
+    length_index = params[:term].length - 1
+    tags = ActsAsTaggableOn::Tag.all.select {|tag| tag.name[0..length_index].downcase == params[:term].downcase}
     render :json => tags.map { |tag| { :label => tag.name, :value => tag.name} }
   end
 
