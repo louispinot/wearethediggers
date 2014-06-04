@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :pictures
   resources :pictures do
     get 'search', on: :collection
+    get 'autocomplete_tags', on: :collection
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

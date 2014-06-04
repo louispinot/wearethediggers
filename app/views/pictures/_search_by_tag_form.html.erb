@@ -1,11 +1,12 @@
-<%= form_tag search_soldiers_path, :method => :get, :remote => true, class: 'soldier-search-form'  do %>
+<%= form_tag search_pictures_path, :method => :get, :remote => false, class: 'tag-search-form'  do %>
 <h2>Search pictures</h2>
 <div>
 </div>
 <div>
-  <%= select_tag name, options_for_select(@users.collect{ |u| [u.name, u.id] }), options = { :multiple}  %>
+  <%= select_tag "name", option_tags = nil, options: :multiple  %>
 </div>
-</div>
+  <%= autocomplete_field_tag :tags, '', autocomplete_tags_pictures_path,
+  'data-delimiter' => ',', :multiple => true %>
 
 <%= submit_tag "Search" %>
 
