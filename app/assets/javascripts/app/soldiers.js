@@ -6,15 +6,12 @@ $(document).ready(function(){
   });
 
   // bind search form submit to pressiong enter on index view
-  $('.search-box').keypress(function (e) {
-    if (e.which == 13) {
-      $(self).parent.submit();
-    }
-  });
+  // $('.search-box').keypress(function (e) {
+  //  if (e.which == 13) {
+  //    $('.soldier-search-form').submit();
+  //  }
+  //});
 
-  $('.autocomplete').on('railsAutocomplete.select', function(event, data) {
-    console.log(data.item.id);
-  });
 
 });
 

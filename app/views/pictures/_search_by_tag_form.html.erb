@@ -1,0 +1,21 @@
+<%= form_tag search_soldiers_path, :method => :get, :remote => true, class: 'soldier-search-form'  do %>
+<h2>Search pictures</h2>
+<div>
+</div>
+<div>
+  <input name="tagsinput" id="tagsinput" class="tagsinput" style="display: none;">
+  <div id="tagsinput_tagsinput" class="tagsinput" style="height: 100%;">
+
+
+    <div class="tagsinput-add-container" id="tagsinput_addTag">
+      <div class="tagsinput-add">
+      </div>
+      <input id="tagsinput_tag" value="" data-default="" style="color: rgb(102, 102, 102); width: 7px;">
+    </div>
+
+  </div>
+</div>
+
+<%= submit_tag "Search" %>
+
+<% end %>

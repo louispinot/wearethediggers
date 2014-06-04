@@ -8,6 +8,8 @@
 
 <div id="soldiers-search-results">
 
-    <%= render @soldiers %>
+
+      <%= render @soldiers %>
+      <%= "Sorry, there are no matching elements." unless @soldiers.any? %>
 
 </div>

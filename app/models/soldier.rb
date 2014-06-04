@@ -30,14 +30,10 @@ class Soldier < ActiveRecord::Base
                                 }
                               }
 
-    pg_search_scope :search_by_service_number,
-                    :against => :service_number,
-                    :using => { tsearch: {
-                                  prefix: true
-                                }
-                              }
+
 
     scope :unit, ->(unit) { where("unit = ?", unit) }
+    scope :service_number, ->(service_number) { where("service_number = ?", service_number) }
     scope :rank, ->(rank) { where("rank = ?", rank) }
 
     def full_name

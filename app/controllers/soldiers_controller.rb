@@ -27,22 +27,27 @@ class SoldiersController < ApplicationController
   end
 
   def search
-    if (params[:name_query] == "" && params[:service_number] == "")
+    # if (params[:name_query] == "" && params[:service_number] == "")
+    #   @soldiers = Soldier.all
+    # else
+    #   if (params[:name_query] != "" && params[:service_number] == "")
+    #     @soldiers = Soldier.search_by_name(params[:name_query])
+    #   elsif (params[:name_query] == "" && params[:service_number] != "")
+    #     @soldiers = Soldier.search_by_service_number(params[:service_number])
+    #   end
+    # end
+
+    if params[:name_query] == ''
       @soldiers = Soldier.all
     else
-      if (params[:name_query] != "" && params[:service_number] == "")
-        @soldiers = Soldier.search_by_name(params[:name_query])
-      elsif (params[:name_query] == "" && params[:service_number] != "")
-        @soldiers = Soldier.search_by_service_number(params[:service_number])
-      end
+      @soldiers = Soldier.search_by_name(params[:name_query]) unless params[:name_query] == ''
     end
-
+    @soldiers = @soldiers.service_number(params[:service_number]) unless params[:service_number] == ''
     @soldiers = @soldiers.unit(params[:unit]) unless params[:unit] == ''
     @soldiers = @soldiers.rank(params[:rank]) unless params[:rank] == ''
 
     respond_to do |format|
       format.html { render :index }
-      format.js { @articles }
     end
   end
 
