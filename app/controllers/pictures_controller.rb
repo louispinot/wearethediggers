@@ -31,7 +31,6 @@ class PicturesController < ApplicationController
 
   def search_soldier_for_identification
     @soldiers = search_soldiers
-    raise
   end
 
   def show
