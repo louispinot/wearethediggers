@@ -7,10 +7,10 @@
       <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
    </div>
 
-   <%= link_to "Back", soldiers_path, class: "btn btn-lg btn-primary" %>
+   <%= link_to "Back", soldiers_path, class: "btn btn-default" %>
 
    <% if current_user.superuser? %>
-    <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-lg btn-danger" %>
+    <%= link_to "Edit", edit_soldier_path(@soldier) %> <!-- , class: "btn btn-danger" -->
   <%end%>
 </div>
 

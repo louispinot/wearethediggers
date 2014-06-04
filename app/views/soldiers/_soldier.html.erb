@@ -1,13 +1,17 @@
-  <div class="panel panel panel-default soldier-card">
-   <div class="panel-body">
+  <div class="soldier-card">
+   <div class="panel-body text-center">
+    <%= image_tag "http://thuillier-collection.s3.amazonaws.com/img/24-LOST-MockupPlatform-BrowseSoldier-separator.png" %>
+    <p class="soldier-rank"><%= soldier.rank %></p>
 
-    <p><strong><%= link_to ("#{soldier.rank} #{soldier.first_name} #{soldier.last_name}"), soldier_path(soldier)%></strong></p>
-    <div class="soldier-detail">
+    <p><%= link_to ("#{soldier.first_name} #{soldier.last_name}"), soldier_path(soldier), class:"soldier-name" %><p>
+
+    <%= image_tag "http://thuillier-collection.s3.amazonaws.com/img/Diggers-Thumb-InvisibleSoldier-Visible.jpg", class:"img-circle img-responsive soldier-picture" %>
+<!--     <div class="soldier-detail">
       <p>Unit: <%= soldier.unit %></p>
       <p>Service number: <%= soldier.service_number %></p>
       <p>Date and place of death: <%= soldier.date_of_death %>, <%= soldier.place_of_death %></p>
       <p>Place of burial : <%= (soldier.cemetery == "")? "Unknown" : soldier.cemetery %>
       </p>
-      </div>
+      </div> -->
     </div>
   </div>

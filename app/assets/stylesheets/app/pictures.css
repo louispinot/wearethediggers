@@ -49,3 +49,7 @@ top: 170px;
 position: absolute;
 right: 680px;
 }
+
+.picture-box{
+  width: 300px;
+}

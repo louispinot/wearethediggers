@@ -18,7 +18,7 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
-
+/*
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #6b7381;
@@ -35,7 +35,7 @@ a:active {
 	color: #333;
 }
 
-/* Header Style */
+/* Header Style *//*
 .container > header {
 	margin: 0 auto;
 	padding: 2em;
@@ -61,7 +61,7 @@ a:active {
 }
 
 /* To Navigation Style */
-.codrops-top {
+/*.codrops-top {
 	background: #fff;
 	background: rgba(255, 255, 255, 0.8);
 	text-transform: uppercase;
@@ -89,7 +89,7 @@ a:active {
 .codrops-top span.right a {
 	float: left;
 	display: block;
-}
+}*/
 
 .codrops-icon:before {
 	font-family: 'codropsicons';
@@ -131,7 +131,7 @@ a:active {
 .codrops-demos a.current-demo:hover {
 	opacity: 0.6;
 }
-
+*/
 @media screen and (max-width: 25em) {
 
 	.codrops-icon span {

@@ -8,7 +8,7 @@
 // <% end %>
 
 
-$('#grid').append('<%= j render(@pictures) %>');
+$('#pictures-grid').append('<%= j render(@pictures) %>');
 <% if @pictures.next_page %>
   $('.pagination').replaceWith('<%= j will_paginate(@pictures) %>');
 <% else %>

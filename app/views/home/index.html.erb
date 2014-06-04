@@ -1,20 +1,55 @@
-<div id="bg">
-  <img src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/home_full.jpg" alt="Anzac soldier">
-</div>
+<div class="onepage-wrapper">
 
-  <div class="row">
+  <section class="section">
+    <div class="page_container">
+      <h1>EXPLORE</h1>
 
-    <div id="call-to-action" class="col-md-3 text-center">
-
-      <h1>WE ARE THE DIGGERS</h1>
-      <h4>keep history alive... together !</h4>
-      <br><br>
-
+      <h2>A wonderful collection lost for 97 years</h2>
       <% if user_signed_in? %>
-      <%= link_to "Browse Picture Collection", pictures_path, class: "btn btn-lg btn-primary" %>
+      <%= link_to "Explore The Picture Collection", pictures_path, class: "btn btn-lg btn-default" %>
       <% else %>
-      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-primary" %>
-      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-danger" %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+      <% end %>
+      <img id="baseline" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/TXT+-+Let%27s+keep+together.png">
+    </div>
+
+
+    <img class="image-section-1" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-share-naked-2000x1500.jpg">
+  </section>
+
+
+  <section class="section">
+    <div class="page_container">
+      <h1>SHARE</h1>
+
+      <h2>Comment & share something you like</h2>
+      <% if user_signed_in? %>
+      <%= link_to "Find a picture to like", pictures_path, class: "btn btn-lg btn-default" %>
+      <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
       <% end %>
     </div>
+
+    <img class="image-section-2" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-explore-naked-2000x1500px.jpg">
+  </section>
+
+
+  <section class="section">
+    <div class="page_container">
+      <h1>CONTRIBUTE</h1>
+
+      <h2>Comment, upload content, or help to identify a Digger</h2>
+      <% if user_signed_in? %>
+      <%= link_to "Identify a Digger", soldiers_path, class: "btn btn-lg btn-default" %>
+      <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+      <% end %>
+    </div>
+
+    <img class="image-section-3" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-contribute-naked-2000x1500px.jpg">
+  </section>
+
 </div>

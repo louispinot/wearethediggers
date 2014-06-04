@@ -1,8 +1,7 @@
-
-<div class="container">
+<div class="container-fluid blue-bg">
   <div class="row">
     <%= form_tag search_soldiers_path, :method => :get, :remote => true  do %>
-      <h2>Search soldiers</h2>
+      <!-- <h2>Search soldiers</h2> -->
       <div class="col-md-5 col-md-offset-1">
         <%= label_tag :query_type, "Search by:" %>
         <%= select_tag(:query_type, options_for_select([['Name and Rank', 1], ['Service Number', 2]], 1)) %>
