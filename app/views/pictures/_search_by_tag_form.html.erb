@@ -3,17 +3,8 @@
 <div>
 </div>
 <div>
-  <input name="tagsinput" id="tagsinput" class="tagsinput" style="display: none;">
-  <div id="tagsinput_tagsinput" class="tagsinput" style="height: 100%;">
-
-
-    <div class="tagsinput-add-container" id="tagsinput_addTag">
-      <div class="tagsinput-add">
-      </div>
-      <input id="tagsinput_tag" value="" data-default="" style="color: rgb(102, 102, 102); width: 7px;">
-    </div>
-
-  </div>
+  <%= select_tag name, options_for_select(@users.collect{ |u| [u.name, u.id] }), options = { :multiple}  %>
+</div>
 </div>
 
 <%= submit_tag "Search" %>
