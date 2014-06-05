@@ -16,6 +16,7 @@
  *= require 'demo'
  *= require 'icons'
  *= require 'sidebar'
+ *= require 'global'
 
  *= require 'bootstrap-custom'
 
