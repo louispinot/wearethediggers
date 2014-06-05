@@ -2,7 +2,6 @@
  // # All this logic will automatically be available in application.js.
  // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
 $(function(){
 
   var $container = $('#pictures-grid');
@@ -21,7 +20,7 @@ $(function(){
     nextSelector : '.next_page',  // selector for the NEXT link (to page 2)
     itemSelector : '.picture-box',     // selector for all items you'll retrieve
     loading: {
-        finishedMsg: "Congratulations you've seen all the collection" ,
+        finishedMsg: "Congratulations you've seen all the collection"
       }
     },
     // trigger Masonry as a callback

@@ -3,7 +3,7 @@ class SoldiersController < ApplicationController
   before_action :attributes, only: [:update, :create]
 
   def index
-    @soldiers = Soldier.order("last_name").page(params[:page]).per_page(50)
+    @soldiers = Soldier.order("last_name").page(params[:page]).per_page(100)
     authorize @soldiers
 
   end
