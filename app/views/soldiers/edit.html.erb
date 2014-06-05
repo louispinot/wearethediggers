@@ -1,20 +1,22 @@
-<div class="soldier">
-    <p><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></p>
-    <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
-    <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
-    <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
- </div>
+<div class="navbar-spacer"></div>
+<div class="blue-bg force-blue-bg">
+  <div class="soldier">
+      <p><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></p>
+      <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
+      <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
+      <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
+   </div>
 
- <%= link_to "Back", soldier_path(@soldier), class: "btn btn-lg btn-primary" %>
+   <%= link_to "Back", soldier_path(@soldier), class: "btn btn-lg btn-primary" %>
 
-<div class="editable">
-  <%= @soldier.bio.html_safe if @soldier.bio %>
+  <div class="editable">
+    <%= @soldier.bio.html_safe if @soldier.bio %>
+  </div>
+
+  <%= form_for @soldier do |f| %>
+    <%= f.hidden_field :bio, id: "bio"%>
+    <%= f.submit "Submit changes", class: "submit-bio btn btn-lg btn-primary" %>
+  <% end %>
 </div>
-
-<%= form_for @soldier do |f| %>
-  <%= f.hidden_field :bio, id: "bio"%>
-  <%= f.submit "Submit changes", class: "submit-bio btn btn-lg btn-primary" %>
-<% end %>
-
 
 <script>var editor = new MediumEditor('.editable');</script>
