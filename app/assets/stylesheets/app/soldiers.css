@@ -56,3 +56,13 @@
   width: 150px;
   margin: 0 auto;
 }
+
+#submit-bio-edit, #cancel-bio-edit {
+  margin:3em;
+}
+
+.editable{
+  background-color: #72fff7;
+  min-height: 150px;
+  padding: 0.7em;
+}
