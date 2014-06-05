@@ -5,7 +5,7 @@
 </div>
 <div>
   <%= select_tag :tags,
-    options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name),
+    options_from_collection_for_select(ActsAsTaggableOn::Tags.all, :name, :name),
     placeholder: params[:tags],
     include_blank: true,
     :multiple => true,
