@@ -49,5 +49,8 @@ h2{
   right: 0;
   left: 0;
   background: url(http://thuillier-collection.s3.amazonaws.com/img/Lost-BG-mosaique-face-repeat.jpg) repeat fixed;
+}
 
+.btn{
+  border: 2px solid
 }
