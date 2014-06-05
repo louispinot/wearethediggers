@@ -16,10 +16,16 @@
             <div id="st-trigger-effects" class="column">
               <button id="button-open-sidebar" class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
             </div>
+
+            <%= render partial: 'search_by_tag_form' %>
+
+        <!-- <div class="transitions-enabled infinite-scroll clearfix"> -->
+
             <div id="pictures-grid" class="transitions-enabled infinite-scroll centered">
               <%= render @pictures %>
             </div>
             <%= will_paginate @all_pictures %>
+
           </div><!-- /main -->
         </div><!-- /st-content-inner -->
       </div><!-- /st-content -->

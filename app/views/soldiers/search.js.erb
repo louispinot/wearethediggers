@@ -1,7 +1,22 @@
-$('#soldiers-search-results').html('<%= j render @soldiers %>').hide
 
-if ($('#soldiers-search-results').html() == "") {
-  $('#soldiers-search-results').html('<p>Sorry, there are no matching elements.</p>').display
+<% ###### For Soldier#index view %>
+
+$('#soldiers-index-search-results').html('<%= j render @soldiers %>');
+
+if ($('#soldiers-index-search-results').html() == "") {
+  $('#soldiers-index-search-results').html('<p>Sorry, there are no matching elements.</p>');
 } else {
-    $('#soldiers-search-results').display
+    $('#soldiers-index-search-results');
+}
+
+
+<% ###### For Picture#show view %>
+
+
+$('#soldiers-search-for-indentification').html('<%= j render ########## %>');
+
+if ($('#soldiers-search-for-indentification').html() == "") {
+  $('#soldiers-search-for-indentification').html('<p>Sorry, there are no matching elements.</p>');
+} else {
+    $('#soldiers-search-for-indentification');
 }
