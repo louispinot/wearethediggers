@@ -24,6 +24,7 @@
  *= require 'demo'
  *= require 'icons'
  *= require 'sidebar'
+ *= require 'global'
 
  *= require medium-editor/medium-editor
  *= require medium-editor/themes/flat

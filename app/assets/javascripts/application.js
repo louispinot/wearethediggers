@@ -33,7 +33,9 @@
 
 //= require app/chosen-scaffold
 // require turbolinks
+
 //= require bootstrap
+
 
 //= require_self
 
