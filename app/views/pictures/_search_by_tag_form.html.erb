@@ -2,15 +2,15 @@
 <h2>Search pictures</h2>
 <div>
 
-  <%= p params[:tags] %>
-
 </div>
 <div>
   <%= select_tag :tags,
     options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name),
+    placeholder: params[:tags],
     include_blank: true,
     :multiple => true,
-    class: 'chosen-select'
+    class: 'chosen-select',
+    value: params[:tags]
   %>
 </div>
 

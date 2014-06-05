@@ -28,4 +28,4 @@
 //= require chosen-jquery
 //= require autocomplete-rails
 //= require_tree ./app/
-//= require multi-select
+
