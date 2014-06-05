@@ -7,4 +7,7 @@
       <%= link_to soldier_path(soldier) do %>
         <%= image_tag "http://thuillier-collection.s3.amazonaws.com/img/Diggers-Thumb-InvisibleSoldier-Visible.jpg", class:"img-circle img-responsive soldier-picture" %>
         <% end %>
+
+      <p class"soldier-name" >Service number : <%= soldier.service_number %></p>
+      <p class"soldier-name" ><%= soldier.unit %></p>
   </div>
