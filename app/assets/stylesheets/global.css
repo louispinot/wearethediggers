@@ -22,7 +22,30 @@
           url('Museo_Sans/MuseoSans_900.svg') format('svg');
 }
 
+.container-fluid{
+  padding: 0;
+}
 
 .navbar-spacer{
   height: 110px;
+}
+
+.sign-in-bg{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(http://thuillier-collection.s3.amazonaws.com/img/Lost-BG-mosaique-face-repeat.jpg) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.sign-up-bg{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(http://thuillier-collection.s3.amazonaws.com/img/Lost-BG-mosaique-face-repeat.jpg) repeat fixed;
+
 }
