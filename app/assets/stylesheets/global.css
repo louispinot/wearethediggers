@@ -1,25 +1,29 @@
 @font-face{
     font-family : "MuseoSans_100";
-    src : url('Museo_Sans/MuseoSans_100.eot') format('eot'),
-          url('Museo_Sans/MuseoSans_100.woff') format('woff'),
-          url('Museo_Sans/MuseoSans_100.ttf') format('ttf'),
-          url('Museo_Sans/MuseoSans_100.svg') format('svg');
+    src : url('fonts/Museo_Sans/MuseoSans_100.eot') format('eot'),
+          url('fonts/Museo_Sans/MuseoSans_100.woff') format('woff'),
+          url('fonts/Museo_Sans/MuseoSans_100.ttf') format('ttf'),
+          url('fonts/Museo_Sans/MuseoSans_100.svg') format('svg');
 }
 
 @font-face{
     font-family : "MuseoSans_500";
-    src : url('Museo_Sans/MuseoSans_500.eot') format('eot'),
-          url('Museo_Sans/MuseoSans_500.woff') format('woff'),
-          url('Museo_Sans/MuseoSans_500.ttf') format('ttf'),
-          url('Museo_Sans/MuseoSans_500.svg') format('svg');
+    src : url('fonts/Museo_Sans/MuseoSans_500.eot') format('eot'),
+          url('fonts/Museo_Sans/MuseoSans_500.woff') format('woff'),
+          url('fonts/Museo_Sans/MuseoSans_500.ttf') format('ttf'),
+          url('fonts/Museo_Sans/MuseoSans_500.svg') format('svg');
 }
 
 @font-face{
     font-family : "MuseoSans_900";
-    src : url('Museo_Sans/MuseoSans_900.eot') format('eot'),
-          url('Museo_Sans/MuseoSans_900.woff') format('woff'),
-          url('Museo_Sans/MuseoSans_900.ttf') format('ttf'),
-          url('Museo_Sans/MuseoSans_900.svg') format('svg');
+    src : url('fonts/Museo_Sans/MuseoSans_900.eot') format('eot'),
+          url('fonts/Museo_Sans/MuseoSans_900.woff') format('woff'),
+          url('fonts/Museo_Sans/MuseoSans_900.ttf') format('ttf'),
+          url('fonts/Museo_Sans/MuseoSans_900.svg') format('svg');
+}
+
+h2{
+  font-family: "MuseoSans_100";
 }
 
 .container-fluid{
@@ -27,7 +31,8 @@
 }
 
 .navbar-spacer{
-  height: 110px;
+  top: 0;
+  height: 100px;
 }
 
 .sign-in-bg{
@@ -35,12 +40,9 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: url(http://thuillier-collection.s3.amazonaws.com/img/Lost-BG-mosaique-face-repeat.jpg) repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(http://thuillier-collection.s3.amazonaws.com/img/Lost-BG-mosaique-face-repeat.jpg) repeat fixed;
 }
+
 .sign-up-bg{
   top: 0;
   bottom: 0;

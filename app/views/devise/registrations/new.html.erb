@@ -4,9 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 session-form">
-        <div class="row">
-          <h2 style="margin-left: 2em">Sign up</h2>
-        </div>
+          <h2>Sign up</h2>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.hidden_field :admin, value: false %>
         <%= f.hidden_field :superuser, value: false %>

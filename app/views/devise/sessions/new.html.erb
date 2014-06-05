@@ -5,11 +5,11 @@
     <div class="row">
       <div class="col-md-5 session-form">
         <div class="row">
-          <h2 style="margin-left: 1.8em">Sign in</h2>
+          <h2>SIGN IN</h2>
         </div>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="row" style="margin-left: 2.5em">
+        <div class="row">
           <div>
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true %>
@@ -26,7 +26,7 @@
             </div>
           <% end -%>
           <div>
-            <%= f.submit "Sign in", id:"submit", class: "btn btn-lg btn-danger" %>
+            <%= f.submit "SIGN IN", id:"submit", class: "btn btn-lg btn-danger" %>
           </div>
 
 
