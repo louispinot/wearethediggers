@@ -35,8 +35,7 @@ $(document).ready(function(){
     nextSelector : '.next_page',  // selector for the NEXT link (to page 2)
     itemSelector : '.soldier-card',     // selector for all items you'll retrieve
     loading: {
-        finishedMsg: "" ,
-        img :"http://www.grasphub.com/wp-content/uploads/2013/12/Preloader_9.gif"
+        finishedMsg: ""
       }
     },
     // trigger Masonry as a callback

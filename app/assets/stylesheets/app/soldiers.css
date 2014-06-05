@@ -15,6 +15,7 @@
 }
 
 .soldier-card{
+  min-height: 300px;
   width: 250px;
   margin: 5px;
 }
