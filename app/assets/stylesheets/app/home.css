@@ -1,34 +1,52 @@
-// Place all the styles related to the home controller here.
+/*// Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-#bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  z-index: -1;
+.logo{
+  margin: 1em;
 }
-#bg img {
-  position: absolute;
+
+
+#baseline {
+  position: relative;
+  bottom: 10%;
+  left: 50%;
+  z-index: 10;
+}
+
+.page1{
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  margin: auto;
-  min-width: 20%;
-  min-height: 20%;
+  right: 0;
+  left: 0;
+  background: url(https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-share-naked-2000x1500.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
-.call-to-action {
-  margin-top: 15%;
-  padding: 1em;
-  background-color: rgba(52, 73, 94, 0.7);
-  color:#FFF;
+.page2{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-explore-naked-2000x1500px.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
-.call-to-action a {
-  margin-left:1em;
+.page3{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-contribute-naked-2000x1500px.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
+.page-container {
+min-height: 1000px;
+}

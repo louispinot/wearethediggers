@@ -1,3 +1,6 @@
+// SEARCH    ###################################################################
+
+
 $(document).ready(function(){
  // Deals with the medium-editor.js for editing soldier bio
   $('.submit-bio').on("click", function(){
@@ -13,13 +16,15 @@ $(document).ready(function(){
 });
 
 
+// INFINITE SCROLLING    #######################################################
 
 
-  var $container = $('#soldiers');
+  var $container = $('#soldiers-grid');
 
   $container.imagesLoaded(function(){
     $container.masonry({
       itemSelector: '.soldier-card',
+      isAnimated: !Modernizr.csstransitions,
       isFitWidth: true,
       gutterWidth: 5
     });
@@ -30,7 +35,7 @@ $(document).ready(function(){
     nextSelector : '.next_page',  // selector for the NEXT link (to page 2)
     itemSelector : '.soldier-card',     // selector for all items you'll retrieve
     loading: {
-        finishedMsg: "Congratulations you've seen all the collection" ,
+        finishedMsg: ""
       }
     },
     // trigger Masonry as a callback

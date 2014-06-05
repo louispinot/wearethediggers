@@ -65,3 +65,5 @@ gem 'chosen-rails'
 
 
 gem 'masonry-rails', '~> 0.2.0'
+
+gem 'bootstrap-sass', '~> 3.1.1'

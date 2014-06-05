@@ -1,3 +1,4 @@
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -11,32 +12,27 @@
 // about supported directives.
 //
 //= require jquery
+// require jquery.turbolinks
 //= require jquery_ujs
 
-//= require turbolinks
 //= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll.min
-//= require jquery.capty
-
-
-//= require modernizr.custom
-
-//= require masonry.pkgd.min
-
-//= require jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
 
 //= require imagesloaded
 //= require classie
 
 //= require sidebarEffects
 
-//= require bootstrap.min
 //= require medium-editor
-//= require_self
+
 //= require chosen-jquery
 //= require app/chosen-scaffold
+// require turbolinks
 
 
+//= require_self
 
 //= require_tree ./app
 

@@ -11,28 +11,28 @@
  * file per style scope.
  *
 
- *= require 'bootstrap.min'
- *= require 'flat-ui'
  *= require 'default'
- *= require 'component'
 
-
- *= require 'normalize'
  *= require 'demo'
  *= require 'icons'
- *= require 'component2'
+ *= require 'sidebar'
 
+ *= require 'bootstrap-custom'
 
- *= require 'masonry/transitions'
+ *= require 'masonry/centered'
  *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/transitions'
 
- *= require_tree ./app
- *= require_self
+
  *= require medium-editor/medium-editor
  *= require medium-editor/themes/flat
  *= require chosen
+ *= require_self
+
+
+ *= require_tree ./app
+
  */
 
-.rm-padding{
-  padding: 0;
-}
+

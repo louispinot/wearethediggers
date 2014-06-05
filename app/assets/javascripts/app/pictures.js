@@ -5,19 +5,21 @@
 
 $(function(){
 
-  var $container = $('#grid');
+  var $container = $('#pictures-grid');
 
   $container.imagesLoaded(function(){
     $container.masonry({
-      itemSelector: '.box',
-      isFitWidth: true
+      itemSelector: '.picture-box',
+      isAnimated: !Modernizr.csstransitions,
+      isFitWidth: true,
+      gutterWidth: 10
     });
   });
 
   $container.infinitescroll({
     navSelector  : '.pagination',    // selector for the paged navigation
     nextSelector : '.next_page',  // selector for the NEXT link (to page 2)
-    itemSelector : '.box',     // selector for all items you'll retrieve
+    itemSelector : '.picture-box',     // selector for all items you'll retrieve
     loading: {
         finishedMsg: "Congratulations you've seen all the collection" ,
       }

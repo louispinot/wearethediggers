@@ -1,20 +1,51 @@
-<div id="bg">
-  <img src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/home_full.jpg" alt="Anzac soldier">
-</div>
+<div class="container-fluid">
 
-  <div class="row">
+  <section class="section page1">
+        <div class="page-container">
+          <h2>EXPLORE</h2>
 
-    <div id="call-to-action" class="col-md-3 text-center">
+          <h3>A wonderful collection lost for 97 years</h>
 
-      <h1>WE ARE THE DIGGERS</h1>
-      <h4>keep history alive... together !</h4>
-      <br><br>
+          <% if user_signed_in? %>
+          <%= link_to "Explore The Collection", pictures_path, class: "btn btn-lg btn-default" %>
+          <% else %>
+          <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
+          <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+          <% end %>
+          <div>
+            <img id="baseline" class="img-responsive" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/TXT+-+Let%27s+keep+together.png">
+          </div>
+        </div><!-- page_container -->
+  </section>
 
+
+  <section class="section page2">
+    <div class="page-container">
+      <h2>SHARE</h2>
+
+      <h3>Comment & share something you like</h3>
       <% if user_signed_in? %>
-      <%= link_to "Browse Picture Collection", pictures_path, class: "btn btn-lg btn-primary" %>
+      <%= link_to "Find a picture to like", pictures_path, class: "btn btn-lg btn-default" %>
       <% else %>
-      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-primary" %>
-      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-danger" %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
       <% end %>
     </div>
+  </section>
+
+
+  <section class="section page3">
+    <div class="page-container">
+      <h2>CONTRIBUTE</h2>
+
+      <h3>Comment, upload content, or help to identify a Digger</h3>
+      <% if user_signed_in? %>
+      <%= link_to "Identify a Digger", soldiers_path, class: "btn btn-lg btn-default" %>
+      <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+      <% end %>
+    </div>
+  </section>
+
 </div>
