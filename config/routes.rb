@@ -3,10 +3,17 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   root 'home#index'
+
   resources :soldiers do
     get 'search', on: :collection
+    get :autocomplete_name, :on => :collection
+    get :autocomplete_unit, :on => :collection
+    get :autocomplete_rank, :on => :collection
   end
-  resources :pictures
+  resources :pictures do
+    get :search_soldier_for_identification, on: :collection
+    get :search, on: :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

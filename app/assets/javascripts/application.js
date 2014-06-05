@@ -14,6 +14,7 @@
 //= require jquery
 // require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery.ui.all
 
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
@@ -28,9 +29,12 @@
 //= require medium-editor
 
 //= require chosen-jquery
+
+//= require autocomplete-rails
+
 //= require app/chosen-scaffold
 // require turbolinks
-
+//= require bootstrap/dropdown
 
 //= require_self
 

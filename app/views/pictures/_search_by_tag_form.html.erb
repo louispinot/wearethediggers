@@ -1,0 +1,19 @@
+<%= form_tag search_pictures_path, :method => :get, :remote => false, class: 'tag-search-form'  do %>
+<h2>Search pictures</h2>
+<div>
+
+</div>
+<div>
+  <%= select_tag :tags,
+    options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name),
+    placeholder: params[:tags],
+    include_blank: true,
+    :multiple => true,
+    class: 'chosen-select',
+    value: params[:tags]
+  %>
+</div>
+
+<%= submit_tag "Search" %>
+
+<% end %>

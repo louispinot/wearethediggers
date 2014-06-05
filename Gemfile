@@ -63,7 +63,12 @@ gem 'will_paginate', '~> 3.0'
 gem 'chosen-rails'
 
 
+gem 'acts-as-taggable-on'
+
+gem 'rails3-jquery-autocomplete'
+gem 'jquery-ui-rails'
 
 gem 'masonry-rails', '~> 0.2.0'
 
 gem 'bootstrap-sass', '~> 3.1.1'
+

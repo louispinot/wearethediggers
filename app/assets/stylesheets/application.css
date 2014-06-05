@@ -12,10 +12,23 @@
  *
 
  *= require 'default'
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require jquery.ui.autocomplete
+ *= require jquery.ui.button
+ *= require jquery.ui.datepicker
+ *= require jquery.ui.dialog
+
+ *= require 'normalize'
 
  *= require 'demo'
  *= require 'icons'
  *= require 'sidebar'
+ *= require 'global'
+
+ *= require medium-editor/medium-editor
+ *= require medium-editor/themes/flat
+ *= require chosen
 
  *= require 'bootstrap-custom'
 
@@ -24,13 +37,7 @@
  *= require 'masonry/infinitescroll'
  *= require 'masonry/transitions'
 
-
- *= require medium-editor/medium-editor
- *= require medium-editor/themes/flat
- *= require chosen
  *= require_self
-
-
  *= require_tree ./app
 
  */
