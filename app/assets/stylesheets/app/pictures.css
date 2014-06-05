@@ -44,3 +44,14 @@ top: 170px;
   color: #fff;
   margin-left: 15px;
 }
+
+#button-open-sidebar{
+position: absolute;
+top: 10px;
+right: 0px;
+z-index: 200;
+}
+
+.picture-box{
+  width: 300px;
+}

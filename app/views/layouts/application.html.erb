@@ -1,74 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>We are the diggers</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="../favicon.ico">
-</head>
+
+  <%= render 'layouts/head' %>
+
 <body>
 
-<!-- BOOTSTRAP NAVBAR -->
-
-  <nav class="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "WE ARE THE DIGGERS", root_path, class:"navbar-brand"  %>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Browse Pictures", pictures_path %></li>
-        <li><%= link_to "Browse Soldiers", soldiers_path('a') %></li>
-        <li>
-          <form role="search" class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" placeholder="Search" class="form-control">
-             </div>
-            <button class="btn btn-default" type="submit">Submit</button>
-          </form>
-      </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %><b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "link", new_user_registration_path %></li>
-            <li><%= link_to "link", new_user_registration_path %></li>
-            <li><%= link_to "link", new_user_registration_path %></li>
-            <li><%= link_to "My Account", edit_user_registration_path %></li>
-            <li class="divider"></li>
-            <li><%= link_to "Log out", destroy_user_session_path, method: 'delete' %></li>
-          </ul>
-        </li>
-        <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-        <% end %>
-
-        <li><a href="" id="blank-space"> </a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </nav>
-
+  <%= render 'layouts/navbar' %>
+<% unless notice.nil? %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+<% end %>
 
-  <div class="container-fluid rm-padding">
+  <!-- <div class="container-fluid rm-padding"> -->
     <%= yield %>
-  </div>
+  <!-- </div> -->
+
+  <%= javascript_include_tag 'application' %>
 
 </body>
 </html>

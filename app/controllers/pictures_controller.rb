@@ -20,7 +20,10 @@ class PicturesController < ApplicationController
   end
 
   def index
-    @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 10)
+    if session[:pictures_ids].nil?
+      session[:pictures_ids] = Picture.order('random()').all.map(&:id)
+    end
+    @pictures = Picture.where(id: session[:pictures_ids]).all.paginate(:page => params[:page], :per_page => 20)
   end
 
   def search_soldier_for_identification

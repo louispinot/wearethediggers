@@ -24,8 +24,9 @@ class SoldiersController < ApplicationController
   end
 
   def index
-    @soldiers = Soldier.all
+    @soldiers = Soldier.order("last_name").page(params[:page]).per_page(50)
     authorize @soldiers
+
   end
 
   def search

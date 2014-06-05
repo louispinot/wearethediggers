@@ -11,11 +11,7 @@
  * file per style scope.
  *
 
- *= require 'bootstrap.min'
- *= require 'flat-ui'
  *= require 'default'
- *= require 'component'
-
  *= require jquery.ui.core
  *= require jquery.ui.theme
  *= require jquery.ui.autocomplete
@@ -24,18 +20,23 @@
  *= require jquery.ui.dialog
 
  *= require 'normalize'
+
  *= require 'demo'
  *= require 'icons'
- *= require 'component2'
+ *= require 'sidebar'
 
- *= require_tree ./app
- *= require_self
  *= require medium-editor/medium-editor
  *= require medium-editor/themes/flat
  *= require chosen
 
- */
+ *= require 'bootstrap-custom'
 
-.rm-padding{
-  padding: 0;
-}
+ *= require 'masonry/centered'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/transitions'
+
+ *= require_self
+ *= require_tree ./app
+
+ */
