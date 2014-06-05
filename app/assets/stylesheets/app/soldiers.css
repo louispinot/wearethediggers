@@ -32,6 +32,8 @@
 }
 
 .blue-bg{
+  color: #234D4B;
+  text-transform: uppercase;;
   background-color: #3ceee8;
   margin-top: 100px;
 }

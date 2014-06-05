@@ -12,7 +12,23 @@ class Soldier < ActiveRecord::Base
                                   prefix: true,
                                   any_word: true
                                 }
-                              }
+                              },
+                    :order_within_rank => "last_name ASC"
+
+    def self.name_search(query)
+      selection = []
+      self.all.each do |soldier|
+        query.each do |word|
+          prefix_index = word.length - 1
+          if (soldier.first_name.downcase[0..prefix_index] == word.downcase || soldier.last_name.downcase[0..prefix_index] == word.downcase)
+            selection << soldier
+          end
+        end
+      end
+      selection.uniq!
+      selection
+    end
+
 
     pg_search_scope :filter_by_unit,
                     :against => :unit,

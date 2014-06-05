@@ -31,10 +31,6 @@ class SoldiersController < ApplicationController
 
   def search
     @soldiers = search_soldiers
-
-    respond_to do |format|
-      format.html { render :index }
-    end
   end
 
   def show
