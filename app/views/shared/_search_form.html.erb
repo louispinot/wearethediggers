@@ -1,22 +1,41 @@
-<%= form_tag form_url, :method => :get, class: 'soldier-search-form', remote: remote  do %>
-<h2>Search soldiers</h2>
-<div>
-  <%= label_tag :name_query, "Search by name:" %>
-  <%= autocomplete_field_tag :name_query, params[:name_query], autocomplete_name_soldiers_path, :size => 75, class: "autocomplete search-box", autofocus: true %>
-</div>
-<div>
-  <%= label_tag :service_number, "Search by service number:" %>
-  <%= text_field_tag :service_number, params[:service_number], class: 'search-box' %>
-</div>
 
-<div>
-  <%= label_tag :unit, "Filter by unit:" %>
-  <%= autocomplete_field_tag :unit, params[:unit], autocomplete_unit_soldiers_path, :size => 75, class: "autocomplete search-box" %>
-</div>
-<div>
-  <%= label_tag :rank, "Filter by rank:" %>
-  <%= autocomplete_field_tag :rank, params[:rank], autocomplete_rank_soldiers_path, :size => 75, class: "autocomplete search-box" %>
-</div>
-<%= submit_tag "Search" %>
 
-<% end %>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1 class="panel-title">
+          <a data-toggle="collapse" style="color: #234D4B;" data-parent="#accordion" href="#collapseOne">
+            Search soldiers <b class="caret"></b>
+          </a>
+        </h1>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in row" style="background-color: #3ceee8;">
+        <%= form_tag form_url, :method => :get, class: 'soldier-search-form', remote: remote, role: 'form-inline'  do %>
+          <div class="col-md-3 col-md-offset-1">
+            <div class="form-group">
+              <%= label_tag :name_query, "Search by name:" %>
+              <%= autocomplete_field_tag :name_query, params[:name_query], autocomplete_name_soldiers_path, :size => 75, class: "autocomplete search-box form-control", autofocus: true %>
+            </div>
+            <div class="form-group">
+              <%= label_tag :service_number, "Search by service number:" %>
+              <%= text_field_tag :service_number, params[:service_number], class: 'search-box form-control' %>
+            </div>
+          </div>
+          <div class="col-md-3 col-md-offset-1">
+            <div class="form-group">
+              <%= label_tag :unit, "Filter by unit:" %>
+              <%= autocomplete_field_tag :unit, params[:unit], autocomplete_unit_soldiers_path, :size => 75, class: "autocomplete search-box form-control" %>
+            </div>
+            <div class="form-group">
+              <%= label_tag :rank, "Filter by rank:" %>
+              <%= autocomplete_field_tag :rank, params[:rank], autocomplete_rank_soldiers_path, :size => 75, class: "autocomplete search-box form-control" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <%= submit_tag "Search", class: "btn btn-default btn-lg", style: "margin-top: 3em;" %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>

@@ -1,4 +1,3 @@
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -34,7 +33,7 @@
 
 //= require app/chosen-scaffold
 // require turbolinks
-
+//= require bootstrap
 
 //= require_self
 

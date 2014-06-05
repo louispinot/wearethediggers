@@ -1,18 +1,18 @@
 <div class="blue-bg">
-  <div class="container-fluid">
+  <div class="container">
 
-<%= render 'shared/search_form', form_url: search_soldiers_path, remote: false %>
+<%= render 'shared/search_form', form_url: search_soldiers_path, remote: true %>
 
       <div class="row">
-        <div id="soldiers-search-results">
-          <div id="soldiers-grid" class="transitions-enabled infinite-scroll centered">
+
+          <div class="row-fluid soldiers-grid">
               <%= render @soldiers %>
               <%= "Sorry, there are no matching elements." unless @soldiers.any? %>
           </div>
-         <%= will_paginate @soldiers %>
-
         </div>
-      </div>
+        <%= will_paginate @soldiers %>
+
+
   </div> <!-- /CONTAINER-FLUID -->
 </div><!-- /blue bG -->
 

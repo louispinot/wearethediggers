@@ -1,9 +1,9 @@
-  <div class="soldier-card text-center">
+  <div class="soldier-card text-center col-md-3 col-sm-6 col-xs-12">
       <%= image_tag "http://thuillier-collection.s3.amazonaws.com/img/24-LOST-MockupPlatform-BrowseSoldier-separator.png" %>
 
       <p class="soldier-rank"><%= soldier.rank %></p>
 
-      <p><%= link_to ("#{soldier.first_name} #{soldier.last_name}"), soldier_path(soldier), class:"soldier-name" %><p>
+      <p><%= link_to ("#{soldier.first_name} #{soldier.last_name}"), soldier_path(soldier), class: "soldier-name" %><p>
       <%= link_to soldier_path(soldier) do %>
         <%= image_tag "http://thuillier-collection.s3.amazonaws.com/img/Diggers-Thumb-InvisibleSoldier-Visible.jpg", class:"img-circle img-responsive soldier-picture" %>
         <% end %>

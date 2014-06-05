@@ -72,3 +72,6 @@ gem 'masonry-rails', '~> 0.2.0'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+gem "pry-debugger", group: :development
+gem "binding_of_caller", group: :development
+
