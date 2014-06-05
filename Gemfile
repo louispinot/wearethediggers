@@ -38,7 +38,6 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'activerecord-session_store'
 
 gem 'better_errors'
-gem 'binding_of_caller'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
