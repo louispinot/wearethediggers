@@ -34,7 +34,7 @@
 
 //= require app/chosen-scaffold
 // require turbolinks
-
+//= require bootstrap/dropdown
 
 //= require_self
 

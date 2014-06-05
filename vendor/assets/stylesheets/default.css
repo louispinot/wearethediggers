@@ -131,7 +131,7 @@ a:active {
 .codrops-demos a.current-demo:hover {
 	opacity: 0.6;
 }
-*/
+
 @media screen and (max-width: 25em) {
 
 	.codrops-icon span {

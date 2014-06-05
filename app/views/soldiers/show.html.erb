@@ -2,17 +2,17 @@
   <h1><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h1>
 
    <div>
-      <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
+      <p><%= @soldier.unit %>;   Service number : <%= @soldier.service_number %></p>
       <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
       <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
    </div>
 
-   <%= link_to "Back", soldiers_path, class: "btn btn-default" %>
+  <%= link_to "Back", soldiers_path, class: "btn btn-default" %>
 
-   <% if current_user.superuser? %>
-    <%= link_to "Edit", edit_soldier_path(@soldier) %> <!-- , class: "btn btn-danger" -->
+  <% if current_user.superuser? %>
+    <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-danger" %> <!-- , class: "btn btn-danger" -->
   <%end%>
-</div>
+</div><!-- #soldier -->
 
 
 <%= content_tag('div', class: "bio-in-html") do  -%>
