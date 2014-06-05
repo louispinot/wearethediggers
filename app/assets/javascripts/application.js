@@ -12,18 +12,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
+// require jquery.turbolinks
 //= require jquery_ujs
 
 //= require masonry/jquery.masonry
-//= require masonry/jquery.infinitescroll.min
 //= require masonry/jquery.imagesloaded.min
-//= require modernizr.custom
+//= require masonry/jquery.infinitescroll.min
 //= require masonry/modernizr-transitions
-
-// require jquery.onepage-scroll
-
-// require jquery.capty
 
 //= require imagesloaded
 //= require classie
@@ -31,10 +26,13 @@
 //= require sidebarEffects
 
 //= require medium-editor
-//= require_self
+
 //= require chosen-jquery
 //= require app/chosen-scaffold
 // require turbolinks
+
+
+//= require_self
 
 //= require_tree ./app
 

@@ -16,7 +16,7 @@
             <div id="st-trigger-effects" class="column">
               <button id="button-open-sidebar" class="btn btn-warning" data-effect="st-effect-4">Filter Results</button>
             </div>
-            <div id="pictures-grid" class="grid effect-4 transitions-enabled centered">
+            <div id="pictures-grid" class="transitions-enabled infinite-scroll centered">
               <%= render @pictures %>
             </div>
             <%= will_paginate @all_pictures %>

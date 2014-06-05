@@ -8,7 +8,6 @@ $(function(){
   var $container = $('#pictures-grid');
 
   $container.imagesLoaded(function(){
-    // console.debug("coucou");
     $container.masonry({
       itemSelector: '.picture-box',
       isAnimated: !Modernizr.csstransitions,
@@ -23,6 +22,7 @@ $(function(){
     itemSelector : '.picture-box',     // selector for all items you'll retrieve
     loading: {
         finishedMsg: "Congratulations you've seen all the collection" ,
+        img :"http://www.grasphub.com/wp-content/uploads/2013/12/Preloader_9.gif"
       }
     },
     // trigger Masonry as a callback

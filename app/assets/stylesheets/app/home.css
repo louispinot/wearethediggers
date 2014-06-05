@@ -2,28 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-.onepage-wrapper .section > img {
-  position: absolute;
-  max-width: 100%;
-  top: 0;
-  left: 0;
+.logo{
+  margin: 1em;
 }
 
-.image-section-1 {
-  z-index: -5;
-}
-
-.image-section-2 {
-  z-index: -4;
-}
-
-.image-section-3 {
-  z-index: -3;
-}
 
 #baseline {
   position: relative;
-  top: 10%;
+  bottom: 10%;
   left: 50%;
   z-index: 10;
+}
+
+.page1{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-share-naked-2000x1500.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.page2{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-explore-naked-2000x1500px.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.page3{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/Lost-BG-mosaique-contribute-naked-2000x1500px.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.page-container {
+min-height: 1000px;
 }

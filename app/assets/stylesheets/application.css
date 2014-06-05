@@ -17,27 +17,22 @@
  *= require 'icons'
  *= require 'sidebar'
 
- *= require bootstrap-custom
- * require 'flat-ui'
-
- *= require 'onepage-scroll'
+ *= require 'bootstrap-custom'
 
  *= require 'masonry/centered'
  *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
  *= require 'masonry/transitions'
 
- *= require_self
+
  *= require medium-editor/medium-editor
  *= require medium-editor/themes/flat
  *= require chosen
-
-
+ *= require_self
 
 
  *= require_tree ./app
 
  */
 
-.logo{
-  margin: 1em;
-}
+

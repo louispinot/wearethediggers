@@ -93,10 +93,3 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
 }
 
-.page_container{
-  position: relative;
-  top: 15%;
-  margin: 0 auto;
-  max-width: 950px;
-  z-index: 10;
-}

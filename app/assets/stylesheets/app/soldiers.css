@@ -15,7 +15,6 @@
 }
 
 .soldier-card{
-  /*background-color: rgba(0,39,59,.35);*/
   width: 250px;
   margin: 5px;
 }
@@ -33,6 +32,7 @@
 
 .blue-bg{
   background-color: #3ceee8;
+  margin-top: 100px;
 }
 
 .soldier-picture{
