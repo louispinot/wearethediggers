@@ -1,7 +1,10 @@
 // BIOGRAPHY EDIT WITH MEDIUM EDITOR
 $(document).ready(function(){
+
    // Deals with the medium-editor.js for editing soldier bio
-  $('.submit-bio').on("click", function(){
+  var editor = new MediumEditor('.editable');
+
+  $('#submit-bio-edit').on("click", function(){
     var bioHTML = $('.editable').html();
     $('#bio').val(bioHTML);
   });

@@ -45,7 +45,32 @@
   margin-top: 100px;
 }
 
+.force-blue-bg{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0
+}
+
 .soldier-picture{
   width: 150px;
   margin: 0 auto;
+}
+
+#submit-bio-edit, #cancel-bio-edit {
+  margin:3em;
+}
+
+.editable{
+  background-color: #72fff7;
+  min-height: 150px;
+  padding: 0.7em;
+}
+
+
+.bio-in-html{
+  background-color: #61d8d0;
+  min-height: 150px;
+  padding: 0.7em;
 }

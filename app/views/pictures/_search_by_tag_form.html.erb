@@ -1,19 +1,28 @@
-<%= form_tag search_pictures_path, :method => :get, :remote => false, class: 'tag-search-form'  do %>
-<h2>Search pictures</h2>
-<div>
+<%= form_tag search_pictures_path, :method => :get, :remote => false, class: 'tag-search-form', role: 'form-inline'  do %>
+<div class="row" style="margin-bottom: 2em;">
+  <div class="col-md-4">
+
+
+    <h2>Search pictures</h2>
+
+    <div class="form-group">
+      <%= select_tag :tags,
+        options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name,
+          params[:tags]),
+        placeholder: params[:tags],
+        include_blank: true,
+        :multiple => true,
+        class: 'chosen-select form-control search-box'
+      %>
+
+    </div>
+  </div>
+
+  <div class="col-md-2 col-md-offset-1">
+    <%= submit_tag "Search", class: "btn btn-primary", style: "margin-top: 3em;" %>
+  </div>
 
 </div>
-<div>
-  <%= select_tag :tags,
-    options_from_collection_for_select(ActsAsTaggableOn::Tags.all, :name, :name),
-    placeholder: params[:tags],
-    include_blank: true,
-    :multiple => true,
-    class: 'chosen-select',
-    value: params[:tags]
-  %>
-</div>
 
-<%= submit_tag "Search" %>
 
 <% end %>

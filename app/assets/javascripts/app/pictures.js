@@ -31,8 +31,15 @@ $(function(){
       $newElems.imagesLoaded(function(){
         // show elems now they're ready
         $newElems.animate({ opacity: 1 });
-        $container.masonry( 'appended', $newElems, true );
+        $container.masonry('appended', $newElems, true );
       });
     }
   );
+});
+
+// bind search form submit to pressiong enter on index view
+$('.search-box').keypress(function(e){
+  if (e.which == 13) {
+    $('.tag-search-form').submit();
+  }
 });

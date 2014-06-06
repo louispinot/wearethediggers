@@ -6,7 +6,7 @@ class PicturesController < ApplicationController
   require 'will_paginate/array'
 
   def search
-    if params[:tags] == ""
+    if (params[:tags] == "" || params[:tags] == nil)
       @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 10)
     else
       @pictures = Picture.tagged_with(params[:tags]) #, :match_all => true)

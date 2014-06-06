@@ -1,35 +1,46 @@
-<div id="soldier" class="panel panel- col-md-6 col-md-offset-3">
-  <h1><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h1>
+<div class="navbar-spacer"></div>
+<div class="blue-bg force-blue-bg">
+  <div id="soldier" class="col-md-6 col-md-offset-3">
+    <h1><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h1>
 
-   <div>
-      <p><%= @soldier.unit %>;   Service number : <%= @soldier.service_number %></p>
-      <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
-      <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
-   </div>
+    <div>
+        <p><%= @soldier.unit %>;   Service number : <%= @soldier.service_number %></p>
+        <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
+        <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
+    </div>
 
-  <%= link_to "Back", soldiers_path, class: "btn btn-default" %>
+    <h3>Biography</h3>
+    <div class="bio-in-html" >
+      <%= @soldier.bio.html_safe if (@soldier.bio || @soldier.bio != "")  %>
+      <%= "#{@soldier.first_name} #{@soldier.last_name} doesn't have a biography yet." unless (@soldier.bio && @soldier.bio != "") %>
 
-  <% if current_user.superuser? %>
-    <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-danger" %> <!-- , class: "btn btn-danger" -->
-  <%end%>
-</div><!-- #soldier -->
+    </div>
+
+    <%= link_to "Back", soldiers_path, class: "btn btn-default" %>
 
 
-<%= content_tag('div', class: "bio-in-html") do  -%>
-  <%= @soldier.bio.html_safe if @soldier.bio %>
-<% end %>
 
-<!-- SPACER  ############################################################### -->
 
-<div id="spacer"></div>
+    <% if current_user.superuser? %>
+      <%= link_to "Edit", edit_soldier_path(@soldier), class: "btn btn-danger" %> <!-- , class: "btn btn-danger" -->
+    <%end%>
+  </div><!-- #soldier -->
 
-<!-- DISQUS  ############################################################### -->
 
-<div class="col-md-6 col-md-offset-3">
-  <%= render 'disqus/thread'%>
-</div>
 
-<!-- DISQUS SCRIPT  ######################################################## -->
+  <!-- SPACER  ############################################################### -->
+
+  <div id="spacer"></div>
+
+  <!-- DISQUS  ############################################################### -->
+
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'disqus/thread'%>
+  </div>
+
+  <!-- DISQUS SCRIPT  ######################################################## -->
+</div>  <!-- blue-bg -->
+
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
