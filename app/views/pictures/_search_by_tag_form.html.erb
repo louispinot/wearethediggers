@@ -6,13 +6,14 @@
 
     <div class="form-group">
       <%= select_tag :tags,
-        options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name),
+        options_from_collection_for_select(ActsAsTaggableOn::Tag.all, :name, :name,
+          params[:tags]),
         placeholder: params[:tags],
         include_blank: true,
         :multiple => true,
-        class: 'chosen-select form-control',
-        value: params[:tags]
+        class: 'chosen-select form-control search-box'
       %>
+
     </div>
   </div>
 

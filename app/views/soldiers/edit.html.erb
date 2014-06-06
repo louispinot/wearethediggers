@@ -10,8 +10,8 @@
     </div>
     <h3>Biography</h3>
     <div class="editable">
-      <%= "Write a biography" unless @soldier.bio %>
-      <%= raw @soldier.bio if @soldier.bio %>
+      <%= "Write a biography" unless (@soldier.bio && @soldier.bio != "") %>
+      <%= raw @soldier.bio if (@soldier.bio || @soldier.bio != "") %>
     </div>
     <div class="row soldier-bio-form">
       <div class="col-md-5">
@@ -21,7 +21,7 @@
         <% end %>
       </div>
       <div class="col-md-5">
-        <%= link_to "Back", soldier_path(@soldier), class: "btn btn-lg btn-primary", id: "cancel-bio-edit" %>
+        <%= link_to "Cancel Changes", soldier_path(@soldier), class: "btn btn-lg btn-primary", id: "cancel-bio-edit" %>
       </div>
     </div>
   </div>

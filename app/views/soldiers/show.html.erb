@@ -9,9 +9,12 @@
         <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
     </div>
 
-    <%= content_tag('div', class: "bio-in-html") do %>
-      <%= @soldier.bio.html_safe if @soldier.bio %>
-    <% end %>
+    <h3>Biography</h3>
+    <div class="bio-in-html" >
+      <%= @soldier.bio.html_safe if (@soldier.bio || @soldier.bio != "")  %>
+      <%= "#{@soldier.first_name} #{@soldier.last_name} doesn't have a biography yet." unless (@soldier.bio && @soldier.bio != "") %>
+
+    </div>
 
     <%= link_to "Back", soldiers_path, class: "btn btn-default" %>
 

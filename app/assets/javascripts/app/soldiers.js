@@ -3,8 +3,7 @@ $(document).ready(function(){
    // Deals with the medium-editor.js for editing soldier bio
   var editor = new MediumEditor('.editable');
 
-  $('.submit-bio-edit').on("click", function(e){
-    e.preventDefault;
+  $('#submit-bio-edit').on("click", function(){
     var bioHTML = $('.editable').html();
     $('#bio').val(bioHTML);
   });
