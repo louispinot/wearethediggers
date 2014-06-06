@@ -1,20 +1,28 @@
-<div class="soldier">
-    <p><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></p>
-    <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
-    <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
-    <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
- </div>
-
- <%= link_to "Back", soldier_path(@soldier), class: "btn btn-lg btn-primary" %>
-
-<div class="editable">
-  <%= @soldier.bio.html_safe if @soldier.bio %>
+<div class="navbar-spacer"></div>
+<div class="blue-bg force-blue-bg">
+  <div class="container">
+    <div class="soldier">
+        <h1>Editing soldier biography</h1>
+        <h3><%= @soldier.rank%> <%= @soldier.first_name%> <%= @soldier.last_name%></h3>
+        <p><%= @soldier.unit %>;   Service number: <%= @soldier.service_number %></p>
+        <p>Date and place of death: <%= @soldier.date_of_death %>, <%= @soldier.place_of_death %></p>
+        <p>Place of burial : <%= (@soldier.cemetery == "")? "Unknown" : @soldier.cemetery %></p>
+    </div>
+    <h3>Biography</h3>
+    <div class="editable">
+      <%= "Write a biography" unless (@soldier.bio && @soldier.bio != "") %>
+      <%= raw @soldier.bio if (@soldier.bio || @soldier.bio != "") %>
+    </div>
+    <div class="row soldier-bio-form">
+      <div class="col-md-5">
+        <%= form_for @soldier do |f| %>
+          <%= f.hidden_field :bio, id: "bio"%>
+          <%= f.submit "Save changes", class: "btn btn-lg btn-primary", id: "submit-bio-edit" %>
+        <% end %>
+      </div>
+      <div class="col-md-5">
+        <%= link_to "Cancel Changes", soldier_path(@soldier), class: "btn btn-lg btn-primary", id: "cancel-bio-edit" %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= form_for @soldier do |f| %>
-  <%= f.hidden_field :bio, id: "bio"%>
-  <%= f.submit "Submit changes", class: "submit-bio btn btn-lg btn-primary" %>
-<% end %>
-
-
-<script>var editor = new MediumEditor('.editable');</script>

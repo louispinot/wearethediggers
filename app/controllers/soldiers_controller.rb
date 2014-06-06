@@ -39,10 +39,12 @@ class SoldiersController < ApplicationController
 
   def edit
     authorize @soldier
+
   end
 
   def update
     authorize @soldier
+
     @soldier.update!(attributes)
     redirect_to soldier_path(@soldier)
   end
