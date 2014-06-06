@@ -62,7 +62,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'chosen-rails'
 
 
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '~> 3.2.6'
 
 gem 'rails3-jquery-autocomplete'
 gem 'jquery-ui-rails'

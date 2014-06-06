@@ -30,8 +30,9 @@
 .soldier-rank{
   text-transform: uppercase;
   color: #154d4b;
-  font-weight: bold;
+  font-family: "MuseoSans_500";
 }
+
 
 .soldier-name{
   text-transform: capitalize;
