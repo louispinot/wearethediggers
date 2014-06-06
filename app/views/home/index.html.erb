@@ -1,19 +1,27 @@
+<div class="navbar-spacer"></div>
+
 <div class="container-fluid">
 
   <section class="section page1">
         <div class="page-container">
-          <h2>EXPLORE</h2>
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <img id="baseline" class="img-responsive" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/TXT+-+Let%27s+keep+together.png">
+            </div>
+          </div>
+          <div class="row">
 
-          <h3>A wonderful collection lost for 97 years</h>
+            <h2>EXPLORE</h2>
 
-          <% if user_signed_in? %>
-          <%= link_to "Explore The Collection", pictures_path, class: "btn btn-lg btn-default" %>
-          <% else %>
-          <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
-          <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
-          <% end %>
-          <div>
-            <img id="baseline" class="img-responsive" src="https://s3-eu-west-1.amazonaws.com/thuillier-collection/img/TXT+-+Let%27s+keep+together.png">
+            <h3>A wonderful collection lost for 97 years</h>
+          </div>
+          <div class="row">
+            <% if user_signed_in? %>
+            <%= link_to "EXPLORE THE COLLECTION", pictures_path, class: "btn btn-lg btn-default" %>
+            <% else %>
+            <%= link_to "SIGN IN", new_user_session_path, class: "btn btn-lg btn-default" %>
+            <%= link_to "SIGN UP!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+            <% end %>
           </div>
         </div><!-- page_container -->
   </section>
@@ -25,7 +33,7 @@
 
       <h3>Comment & share something you like</h3>
       <% if user_signed_in? %>
-      <%= link_to "Find a picture to like", pictures_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "FIND A PICTURE TO LIKE", pictures_path, class: "btn btn-lg btn-default" %>
       <% else %>
       <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
       <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
@@ -40,7 +48,7 @@
 
       <h3>Comment, upload content, or help to identify a Digger</h3>
       <% if user_signed_in? %>
-      <%= link_to "Identify a Digger", soldiers_path, class: "btn btn-lg btn-default" %>
+      <%= link_to "IDENTIFY A DIGGER", soldiers_path, class: "btn btn-lg btn-default" %>
       <% else %>
       <%= link_to "Sign in", new_user_session_path, class: "btn btn-lg btn-default" %>
       <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-warning" %>
